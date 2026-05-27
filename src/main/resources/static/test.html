@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test</title>
+</head>
+<body>
+    <h1>Test de JavaScript</h1>
+    <button onclick="testFunction()">Probar</button>
+    
+    <script>
+        function testFunction() {
+            alert('¡JavaScript funciona correctamente!');
+        }
+        
+        console.log('Test cargado');
+    </script>
+    
+    <script src="estudiante.js"></script>
+    <script>
+        setTimeout(() => {
+            if (typeof loadEstudiantes === 'function') {
+                console.log('✅ estudiante.js cargado correctamente');
+                alert('✅ estudiante.js está funcionando');
+            } else {
+                console.error('❌ estudiante.js NO se cargó');
+                alert('❌ estudiante.js no se encuentra. Verifica la ruta.');
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
