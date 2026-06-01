@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: edu.javeriana.estudiante_notas.EstudianteNotasApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.747 s -- in edu.javeriana.estudiante_notas.EstudianteNotasApplicationTests

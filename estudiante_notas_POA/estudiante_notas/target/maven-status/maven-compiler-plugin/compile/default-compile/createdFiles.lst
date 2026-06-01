@@ -1,0 +1,15 @@
+edu\javeriana\estudiante_notas\repositorio\RepositorioMateria.class
+edu\javeriana\estudiante_notas\modelo\Materia.class
+edu\javeriana\estudiante_notas\modelo\Nota.class
+edu\javeriana\estudiante_notas\servicio\ServicioNota.class
+edu\javeriana\estudiante_notas\modelo\ResumenPromedio.class
+edu\javeriana\estudiante_notas\servicio\ServicioMateria.class
+edu\javeriana\estudiante_notas\servicio\ServicioNotaImpl.class
+edu\javeriana\estudiante_notas\repositorio\RepositorioResumenPromedio.class
+edu\javeriana\estudiante_notas\servicio\ServicioMateriaImpl.class
+edu\javeriana\estudiante_notas\EstudianteNotasApplication.class
+edu\javeriana\estudiante_notas\controlador\MateriaControlador.class
+edu\javeriana\estudiante_notas\dto\MateriaDTO.class
+edu\javeriana\estudiante_notas\dto\NotaDto.class
+edu\javeriana\estudiante_notas\repositorio\RepositorioNota.class
+edu\javeriana\estudiante_notas\controlador\NotaControlador.class

@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Notas - Javeriana</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #f0f2f5; color: #222; min-height: 100vh; }
+
+        /* NAV */
+        nav {
+            background: #003a6e;
+            color: white;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 56px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+        nav .brand { font-size: 18px; font-weight: 700; letter-spacing: 0.5px; }
+        nav .user-info { display: flex; align-items: center; gap: 12px; font-size: 14px; }
+        nav .badge {
+            background: #f0a500;
+            color: #222;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 12px;
+        }
+        nav .badge.alumno { background: #27ae60; color: white; }
+        nav button { background: rgba(255,255,255,0.15); color: white; border: 1px solid rgba(255,255,255,0.3); padding: 5px 14px; border-radius: 6px; cursor: pointer; font-size: 13px; }
+        nav button:hover { background: rgba(255,255,255,0.25); }
+
+        /* TABS */
+        .tabs { background: white; border-bottom: 2px solid #e0e0e0; padding: 0 24px; display: flex; gap: 4px; }
+        .tab {
+            padding: 12px 20px;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            font-size: 14px;
+            color: #555;
+            transition: all 0.2s;
+            border-radius: 4px 4px 0 0;
+        }
+        .tab:hover { background: #f5f5f5; color: #003a6e; }
+        .tab.active { border-bottom-color: #003a6e; color: #003a6e; font-weight: 600; }
+
+        /* MAIN */
+        .main { max-width: 1200px; margin: 24px auto; padding: 0 20px; }
+        .page { display: none; }
+        .page.active { display: block; }
+
+        /* CARDS */
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 24px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+            margin-bottom: 20px;
+        }
+        .card h2 { font-size: 18px; margin-bottom: 16px; color: #003a6e; }
+
+        /* FORMS */
+        .form-row { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
+        .form-group { display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 180px; }
+        label { font-size: 13px; color: #555; font-weight: 500; }
+        input, select, textarea {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+            width: 100%;
+            transition: border 0.2s;
+        }
+        input:focus, select:focus, textarea:focus { outline: none; border-color: #003a6e; }
+
+        /* BUTTONS */
+        .btn { padding: 9px 18px; border: none; border-radius: 6px; cursor: pointer; font-size: 14px; font-weight: 500; transition: 0.2s; }
+        .btn-primary { background: #003a6e; color: white; }
+        .btn-primary:hover { background: #004f9e; }
+        .btn-success { background: #27ae60; color: white; }
+        .btn-success:hover { background: #219a52; }
+        .btn-danger { background: #e74c3c; color: white; }
+        .btn-danger:hover { background: #c0392b; }
+        .btn-secondary { background: #95a5a6; color: white; }
+        .btn-secondary:hover { background: #7f8c8d; }
+        .btn-sm { padding: 5px 10px; font-size: 12px; }
+
+        /* TABLE */
+        table { width: 100%; border-collapse: collapse; font-size: 14px; }
+        th { background: #f5f7fa; color: #444; text-align: left; padding: 10px 12px; font-weight: 600; border-bottom: 2px solid #e0e0e0; }
+        td { padding: 10px 12px; border-bottom: 1px solid #f0f0f0; vertical-align: middle; }
+        tr:hover td { background: #fafbff; }
+        .td-actions { display: flex; gap: 6px; flex-wrap: wrap; }
+
+        /* ALERT */
+        .alert {
+            padding: 10px 16px;
+            border-radius: 6px;
+            margin-bottom: 14px;
+            font-size: 14px;
+            display: none;
+        }
+        .alert.show { display: block; }
+        .alert-error { background: #fde8e8; color: #c0392b; border-left: 4px solid #e74c3c; }
+        .alert-success { background: #e8f8f0; color: #1a7a45; border-left: 4px solid #27ae60; }
+        .alert-info { background: #e8f0fb; color: #1a3c6e; border-left: 4px solid #003a6e; }
+
+        /* LOGIN */
+        #login-page {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: calc(100vh - 56px);
+        }
+        .login-card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        .login-card h1 { text-align: center; color: #003a6e; margin-bottom: 8px; font-size: 22px; }
+        .login-card p { text-align: center; color: #888; font-size: 13px; margin-bottom: 24px; }
+        .login-card .form-group { margin-bottom: 14px; }
+        .login-card .btn { width: 100%; padding: 11px; font-size: 15px; margin-top: 6px; }
+
+        /* NOTA FINAL badge */
+        .nota-final {
+            display: inline-block;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .nota-alta { background: #d4edda; color: #155724; }
+        .nota-media { background: #fff3cd; color: #856404; }
+        .nota-baja { background: #f8d7da; color: #721c24; }
+
+        /* NOTA ACUMULADA */
+        .acumulada-box {
+            background: #e8f0fb;
+            border: 1px solid #c3d7f5;
+            border-radius: 8px;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+        .acumulada-box .valor { font-size: 32px; font-weight: 700; color: #003a6e; }
+        .acumulada-box .etiqueta { color: #555; font-size: 13px; }
+
+        /* PROMEDIOS POR MATERIA */
+        .promedios-materia-container {
+            margin-bottom: 20px;
+        }
+        .promedio-card {
+            background: white;
+            border-radius: 8px;
+            padding: 12px 20px;
+            min-width: 150px;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .promedio-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* READONLY hint */
+        .readonly-hint {
+            background: #fff8e1;
+            border: 1px solid #ffe082;
+            border-radius: 6px;
+            padding: 10px 16px;
+            font-size: 13px;
+            color: #7a5200;
+            margin-bottom: 16px;
+        }
+
+        /* HIDDEN */
+        .hidden { display: none !important; }
+        
+        /* VER PROMEDIOS BUTTON */
+        .btn-info {
+            background: #17a2b8;
+            color: white;
+        }
+        .btn-info:hover {
+            background: #138496;
+        }
+        .btn-warning {
+            background: #f39c12;
+            color: white;
+        }
+        .btn-warning:hover {
+            background: #d68910;
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <span class="brand">Sistema de Notas - PUJ</span>
+    <div class="user-info" id="nav-user" style="display:none">
+        <span id="nav-nombre">Usuario</span>
+        <span class="badge" id="nav-rol">ROL</span>
+        <button onclick="logout()">Cerrar sesión</button>
+    </div>
+</nav>
+
+<!-- TABS (solo cuando hay sesión) -->
+<div class="tabs hidden" id="tabs">
+    <div class="tab active" onclick="showPage('notas')">Notas</div>
+    <div class="tab" onclick="showPage('alumnos')" id="tab-alumnos"> Alumnos</div>
+    <div class="tab" onclick="showPage('materias')" id="tab-materias"> Materias</div>
+</div>
+
+<!-- ======================== LOGIN ======================== -->
+<div id="login-page">
+    <div class="login-card">
+        <h1>Sistema de Notas</h1>
+        <p>Pontificia Universidad Javeriana</p>
+        <div id="login-alert" class="alert"></div>
+        <div class="form-group">
+            <label>Correo electrónico</label>
+            <input type="email" id="login-correo" placeholder="correo@javeriana.edu"
+                   value="profesor@javeriana.edu">
+        </div>
+        <div class="form-group">
+            <label>Contraseña</label>
+            <input type="password" id="login-contrasena" placeholder="Contraseña" value="prof123">
+        </div>
+        <div class="form-group">
+            <label>Ingresar como</label>
+            <select id="login-rol">
+                <option value="PROFESOR">Profesor</option>
+                <option value="ALUMNO">Alumno</option>
+            </select>
+        </div>
+        <button class="btn btn-primary" onclick="login()">Iniciar sesión</button>
+        <p style="margin-top:16px; font-size:12px; color:#888; text-align:center">
+            Prueba: profesor@javeriana.edu / prof123<br>
+            Prueba: alumno@javeriana.edu / alumno123 (ALUMNO)
+        </p>
+    </div>
+</div>
+
+<!-- ======================== APP PAGES ======================== -->
+<div class="main hidden" id="app-pages">
+
+    <!-- ---- PÁGINA: NOTAS ---- -->
+    <div class="page active" id="page-notas">
+        <div class="card">
+            <h2>Gestión de Notas</h2>
+
+            <!-- Selector de alumno -->
+            <div class="form-row" id="alumno-selector-row">
+                <div class="form-group" style="max-width:300px">
+                    <label>Seleccionar alumno</label>
+                    <select id="sel-alumno" onchange="cargarNotasYFinal()">
+                        <option value="">-- Seleccione un alumno --</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Nota acumulada (promedio general) -->
+            <div class="acumulada-box hidden" id="acumulada-box">
+                <div class="valor" id="acumulada-valor">0.00</div>
+                <div>
+                    <div style="font-weight:600; color:#003a6e">Promedio General</div>
+                    <div class="etiqueta">Promedio de todos los promedios por materia</div>
+                </div>
+            </div>
+
+            <!-- Promedios por materia (NUEVO) -->
+            <div id="promedios-materia-container" class="promedios-materia-container"></div>
+
+            <!-- Alerta de intento de edición -->
+            <div id="intento-editar-alert" class="alert"></div>
+
+            <!-- Hint solo lectura alumno -->
+            <div class="readonly-hint hidden" id="readonly-hint">
+                Modo alumno: solo puede consultar sus propias notas. No puede crear, editar ni eliminar.
+            </div>
+
+            <!-- FORMULARIO nueva/editar nota (solo PROFESOR) -->
+            <div id="form-nota" class="hidden" style="margin-bottom:20px; padding:16px; background:#f9fafc; border-radius:8px; border:1px solid #e0e0e0">
+                <h3 style="margin-bottom:12px; font-size:15px; color:#444">
+                    <span id="form-nota-titulo">Nueva nota</span>
+                </h3>
+                <div id="nota-alert" class="alert"></div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Alumno</label>
+                        <select id="nota-alumno">
+                            <option value="">-- Alumno --</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Materia</label>
+                        <select id="nota-materia">
+                            <option value="">-- Materia --</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Valor (0.0 – 5.0)</label>
+                        <input type="number" id="nota-valor" min="0" max="5" step="0.1" placeholder="Ej: 4.5">
+                    </div>
+                    <div class="form-group">
+                        <label>Porcentaje (%)</label>
+                        <input type="number" id="nota-porcentaje" min="1" max="100" placeholder="Ej: 30">
+                    </div>
+                    <div class="form-group">
+                        <label>Observación</label>
+                        <input type="text" id="nota-observacion" placeholder="Ej: Parcial 1">
+                    </div>
+                </div>
+                <input type="hidden" id="nota-id">
+                <div style="display:flex; gap:8px; margin-top:8px">
+                    <button class="btn btn-success" onclick="guardarNota()">Guardar</button>
+                    <button class="btn btn-secondary" onclick="cancelarNota()">Cancelar</button>
+                </div>
+            </div>
+
+            <!-- Botón nueva nota -->
+            <div id="btn-nueva-nota" class="hidden" style="margin-bottom:14px">
+                <button class="btn btn-primary" onclick="nuevaNota()">+ Nueva nota</button>
+            </div>
+
+            <!-- Tabla notas -->
+            <div id="notas-container">
+                <p style="color:#999; font-size:14px">Seleccione un alumno para ver sus notas.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---- PÁGINA: ALUMNOS ---- -->
+    <div class="page" id="page-alumnos">
+        <div class="card">
+            <h2> Gestión de Alumnos</h2>
+            <div id="alumnos-alert" class="alert"></div>
+
+            <!-- Formulario (solo PROFESOR) -->
+            <div id="form-alumno" style="margin-bottom:20px; padding:16px; background:#f9fafc; border-radius:8px; border:1px solid #e0e0e0">
+                <h3 style="margin-bottom:12px; font-size:15px; color:#444" id="form-alumno-titulo">Nuevo alumno</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <input type="text" id="alumno-nombre" placeholder="Nombre">
+                    </div>
+                    <div class="form-group">
+                        <label>Apellido</label>
+                        <input type="text" id="alumno-apellido" placeholder="Apellido">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Correo</label>
+                        <input type="email" id="alumno-correo" placeholder="correo@ejemplo.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Contraseña inicial</label>
+                        <input type="text" id="alumno-contrasena" placeholder="Contraseña">
+                    </div>
+                </div>
+                <input type="hidden" id="alumno-id">
+                <div style="display:flex; gap:8px">
+                    <button class="btn btn-success" onclick="guardarAlumno()">Guardar</button>
+                    <button class="btn btn-secondary" onclick="cancelarAlumno()">Cancelar</button>
+                </div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th><th>Nombre</th><th>Correo</th><th>Promedio General</th><th class="profesor-only">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-alumnos"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- ---- PÁGINA: MATERIAS ---- -->
+    <div class="page" id="page-materias">
+        <div class="card">
+            <h2> Gestión de Materias</h2>
+            <div id="materias-alert" class="alert"></div>
+
+            <div id="form-materia" style="margin-bottom:20px; padding:16px; background:#f9fafc; border-radius:8px; border:1px solid #e0e0e0">
+                <h3 style="margin-bottom:12px; font-size:15px; color:#444" id="form-materia-titulo">Nueva materia</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <input type="text" id="materia-nombre" placeholder="Nombre de la materia">
+                    </div>
+                    <div class="form-group">
+                        <label>Créditos</label>
+                        <input type="number" id="materia-creditos" min="1" placeholder="Ej: 3">
+                    </div>
+                </div>
+                <input type="hidden" id="materia-id">
+                <div style="display:flex; gap:8px">
+                    <button class="btn btn-success" onclick="guardarMateria()">Guardar</button>
+                    <button class="btn btn-secondary" onclick="cancelarMateria()">Cancelar</button>
+                </div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr><th>ID</th><th>Nombre</th><th>Créditos</th><th class="profesor-only">Acciones</th></tr>
+                </thead>
+                <tbody id="tabla-materias"></tbody>
+            </table>
+        </div>
+    </div>
+
+</div><!-- /app-pages -->
+
+<script>
+// El frontend lo sirve el mismo servidor, usar ruta relativa evita CORS completamente
+const API = '/api';
+let sesion = null; // {id, nombre, rol}
+
+// ===================== AUTH =====================
+async function login() {
+    const correo = document.getElementById('login-correo').value.trim();
+    const contrasena = document.getElementById('login-contrasena').value;
+    const rol = document.getElementById('login-rol').value;
+    if (!correo || !contrasena) return showLoginAlert('Complete todos los campos', 'error');
+
+    try {
+        const r = await fetch(`${API}/auth/login`, {
+            method: 'POST',
+            headers: {'Content-Type':'application/json'},
+            credentials: 'same-origin',
+            body: JSON.stringify({correo, contrasena, rol})
+        });
+        const data = await r.json();
+        if (!r.ok) return showLoginAlert(data.mensaje || data.error || 'Credenciales inválidas', 'error');
+        sesion = data;
+        iniciarApp();
+    } catch(e) {
+        showLoginAlert('Error de conexión con el servidor', 'error');
+    }
+}
+
+async function logout() {
+    await fetch(`${API}/auth/logout`, {method:'POST'});
+    sesion = null;
+    location.reload();
+}
+
+function iniciarApp() {
+    document.getElementById('login-page').style.display = 'none';
+    document.getElementById('app-pages').classList.remove('hidden');
+    document.getElementById('tabs').classList.remove('hidden');
+    document.getElementById('nav-user').style.display = 'flex';
+    document.getElementById('nav-nombre').textContent = sesion.nombre;
+    const rolBadge = document.getElementById('nav-rol');
+    rolBadge.textContent = sesion.rol;
+    rolBadge.className = 'badge ' + (sesion.rol === 'ALUMNO' ? 'alumno' : '');
+
+    // Ocultar tab alumnos/materias para ALUMNO
+    if (sesion.rol === 'ALUMNO') {
+        document.getElementById('tab-alumnos').classList.add('hidden');
+        document.getElementById('tab-materias').classList.add('hidden');
+        document.querySelectorAll('.profesor-only').forEach(el => el.style.display = 'none');
+    }
+
+    cargarTodo();
+    configurarVistaRol();
+}
+
+function configurarVistaRol() {
+    if (sesion.rol === 'ALUMNO') {
+        document.getElementById('readonly-hint').classList.remove('hidden');
+        document.getElementById('alumno-selector-row').classList.add('hidden');
+        // Cargar notas del propio alumno
+        document.getElementById('sel-alumno').value = sesion.id;
+        cargarNotasYFinal(sesion.id);
+    } else {
+        document.getElementById('btn-nueva-nota').classList.remove('hidden');
+        document.getElementById('form-nota').classList.remove('hidden');
+    }
+}
+
+function showLoginAlert(msg, tipo) {
+    const el = document.getElementById('login-alert');
+    el.textContent = msg;
+    el.className = `alert alert-${tipo} show`;
+}
+
+// ===================== TABS =====================
+function showPage(name) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.getElementById(`page-${name}`).classList.add('active');
+    event.target.classList.add('active');
+}
+
+// ===================== CARGAR TODO =====================
+async function cargarTodo() {
+    await Promise.all([cargarAlumnos(), cargarMaterias()]);
+    if (sesion.rol === 'PROFESOR') {
+        await cargarTablaAlumnos();
+        await cargarTablaMaterias();
+    }
+}
+
+// ===================== ALUMNOS =====================
+let alumnos = [];
+
+async function cargarAlumnos() {
+    const r = await fetch(`${API}/alumnos`, {credentials:'same-origin'});
+    if (!r.ok) return;
+    alumnos = await r.json();
+    // Poblar selects
+    const sel = document.getElementById('sel-alumno');
+    const selNota = document.getElementById('nota-alumno');
+    sel.innerHTML = '<option value="">-- Seleccione --</option>';
+    selNota.innerHTML = '<option value="">-- Alumno --</option>';
+    alumnos.forEach(a => {
+        const txt = `${a.nombre} ${a.apellido}`;
+        sel.innerHTML += `<option value="${a.id}">${txt}</option>`;
+        selNota.innerHTML += `<option value="${a.id}">${txt}</option>`;
+    });
+}
+
+async function cargarTablaAlumnos() {
+    const tbody = document.getElementById('tabla-alumnos');
+    tbody.innerHTML = '';
+    for (const a of alumnos) {
+        let promedioGeneral = '—';
+        try {
+            // USAR NUEVO ENDPOINT /promedio-general
+            const r = await fetch(`${API}/alumnos/${a.id}/promedio-general`, {credentials:'same-origin'});
+            if (r.ok) {
+                const d = await r.json();
+                promedioGeneral = badgeNota(d.promedioGeneral);
+            }
+        } catch(e) {}
+        const acciones = sesion.rol === 'PROFESOR' ? `
+            <td><div class="td-actions">
+                <button class="btn btn-sm btn-info" onclick="verPromediosAlumno(${a.id})">Promedios</button>
+                <button class="btn btn-sm btn-primary" onclick="editarAlumno(${a.id},'${a.nombre}','${a.apellido}','${a.correo}')">Editar</button>
+                <button class="btn btn-sm btn-danger" onclick="eliminarAlumno(${a.id})">Eliminar</button>
+            </div></td>` : '';
+        tbody.innerHTML += `<tr>
+            <td>${a.id}</td>
+            <td>${a.nombre} ${a.apellido}</td>
+            <td>${a.correo}</td>
+            <td>${promedioGeneral}</td>
+            ${acciones}
+        </tr>`;
+    }
+}
+
+// NUEVA FUNCIÓN: Ver promedios por materia de un alumno
+async function verPromediosAlumno(alumnoId) {
+    try {
+        const r = await fetch(`${API}/notas/alumno/${alumnoId}/promedios-por-materia`, {credentials:'same-origin'});
+        if (r.ok) {
+            const promedios = await r.json();
+            const alumno = alumnos.find(a => a.id === alumnoId);
+            const nombreAlumno = alumno ? `${alumno.nombre} ${alumno.apellido}` : `Alumno ${alumnoId}`;
+            
+            let mensaje = `Promedios por materia de ${nombreAlumno}:\n\n`;
+            if (Object.keys(promedios).length === 0) {
+                mensaje += "No hay notas registradas para este alumno.";
+            } else {
+                for (const [materia, promedio] of Object.entries(promedios)) {
+                    const icono = promedio >= 3.5 ? "" : promedio >= 3.0 ? "" : "";
+                    mensaje += `${materia}: ${promedio.toFixed(2)}\n`;
+                }
+            }
+            alert(mensaje);
+        } else {
+            alert("No se pudieron cargar los promedios");
+        }
+    } catch(e) {
+        alert("Error al cargar promedios");
+    }
+}
+
+async function guardarAlumno() {
+    const id = document.getElementById('alumno-id').value;
+    const body = {
+        nombre: document.getElementById('alumno-nombre').value,
+        apellido: document.getElementById('alumno-apellido').value,
+        correo: document.getElementById('alumno-correo').value,
+        contrasena: document.getElementById('alumno-contrasena').value || 'alumno123',
+        rol: 'ALUMNO'
+    };
+    const url = id ? `${API}/alumnos/${id}` : `${API}/alumnos`;
+    const method = id ? 'PUT' : 'POST';
+    try {
+        const r = await fetch(url, {method, headers:{'Content-Type':'application/json'}, body: JSON.stringify(body)});
+        const data = await r.json();
+        if (!r.ok) return showAlert('alumnos-alert', data.mensaje || data.error || JSON.stringify(data), 'error');
+        showAlert('alumnos-alert', 'Alumno guardado correctamente', 'success');
+        cancelarAlumno();
+        await cargarAlumnos();
+        await cargarTablaAlumnos();
+    } catch(e) { showAlert('alumnos-alert', 'Error de conexión', 'error'); }
+}
+
+function editarAlumno(id, nombre, apellido, correo) {
+    document.getElementById('alumno-id').value = id;
+    document.getElementById('alumno-nombre').value = nombre;
+    document.getElementById('alumno-apellido').value = apellido;
+    document.getElementById('alumno-correo').value = correo;
+    document.getElementById('form-alumno-titulo').textContent = 'Editar alumno';
+}
+
+function cancelarAlumno() {
+    document.getElementById('alumno-id').value = '';
+    document.getElementById('alumno-nombre').value = '';
+    document.getElementById('alumno-apellido').value = '';
+    document.getElementById('alumno-correo').value = '';
+    document.getElementById('alumno-contrasena').value = '';
+    document.getElementById('form-alumno-titulo').textContent = 'Nuevo alumno';
+}
+
+async function eliminarAlumno(id) {
+    if (!confirm('¿Eliminar este alumno y todas sus notas?')) return;
+    const r = await fetch(`${API}/alumnos/${id}`, {method:'DELETE'});
+    if (r.ok) {
+        showAlert('alumnos-alert', 'Alumno eliminado', 'success');
+        await cargarAlumnos();
+        await cargarTablaAlumnos();
+    } else {
+        const d = await r.json();
+        showAlert('alumnos-alert', d.mensaje || 'Error al eliminar', 'error');
+    }
+}
+
+// ===================== MATERIAS =====================
+let materias = [];
+
+async function cargarMaterias() {
+    const r = await fetch(`${API}/materias`, {credentials:'same-origin'});
+    if (!r.ok) return;
+    materias = await r.json();
+    const sel = document.getElementById('nota-materia');
+    sel.innerHTML = '<option value="">-- Materia --</option>';
+    materias.forEach(m => sel.innerHTML += `<option value="${m.id}">${m.nombre}</option>`);
+}
+
+async function cargarTablaMaterias() {
+    const tbody = document.getElementById('tabla-materias');
+    tbody.innerHTML = '';
+    materias.forEach(m => {
+        tbody.innerHTML += `<tr>
+            <td>${m.id}</td>
+            <td>${m.nombre}</td>
+            <td>${m.creditos}</td>
+            <td><div class="td-actions">
+                <button class="btn btn-sm btn-primary" onclick="editarMateria(${m.id},'${m.nombre.replace(/'/g,"\\'")}',${m.creditos})">Editar</button>
+                <button class="btn btn-sm btn-danger" onclick="eliminarMateria(${m.id})">Eliminar</button>
+            </div></td>
+        </tr>`;
+    });
+}
+
+async function guardarMateria() {
+    const id = document.getElementById('materia-id').value;
+    const body = {
+        nombre: document.getElementById('materia-nombre').value,
+        creditos: parseInt(document.getElementById('materia-creditos').value)
+    };
+    const url = id ? `${API}/materias/${id}` : `${API}/materias`;
+    const method = id ? 'PUT' : 'POST';
+    try {
+        const r = await fetch(url, {method, headers:{'Content-Type':'application/json'}, body: JSON.stringify(body)});
+        const data = await r.json();
+        if (!r.ok) return showAlert('materias-alert', data.mensaje || JSON.stringify(data), 'error');
+        showAlert('materias-alert', 'Materia guardada correctamente', 'success');
+        cancelarMateria();
+        await cargarMaterias();
+        await cargarTablaMaterias();
+    } catch(e) { showAlert('materias-alert', 'Error de conexión', 'error'); }
+}
+
+function editarMateria(id, nombre, creditos) {
+    document.getElementById('materia-id').value = id;
+    document.getElementById('materia-nombre').value = nombre;
+    document.getElementById('materia-creditos').value = creditos;
+    document.getElementById('form-materia-titulo').textContent = 'Editar materia';
+}
+function cancelarMateria() {
+    document.getElementById('materia-id').value = '';
+    document.getElementById('materia-nombre').value = '';
+    document.getElementById('materia-creditos').value = '';
+    document.getElementById('form-materia-titulo').textContent = 'Nueva materia';
+}
+async function eliminarMateria(id) {
+    if (!confirm('¿Eliminar esta materia?')) return;
+    const r = await fetch(`${API}/materias/${id}`, {method:'DELETE'});
+    if (r.ok) { await cargarMaterias(); await cargarTablaMaterias(); }
+    else { const d = await r.json(); showAlert('materias-alert', d.mensaje || 'Error', 'error'); }
+}
+
+// ===================== NOTAS =====================
+async function cargarNotasYFinal(alumnoIdParam) {
+    const alumnoId = alumnoIdParam || document.getElementById('sel-alumno').value;
+    if (!alumnoId) {
+        document.getElementById('notas-container').innerHTML = '<p style="color:#999;font-size:14px">Seleccione un alumno.</p>';
+        document.getElementById('acumulada-box').classList.add('hidden');
+        document.getElementById('promedios-materia-container').innerHTML = '';
+        return;
+    }
+
+    // Verificar AOP: alumno solo ve sus propias notas
+    if (sesion.rol === 'ALUMNO' && alumnoId != sesion.id) {
+        document.getElementById('notas-container').innerHTML =
+            '<div class="alert alert-error show">Solo puede consultar sus propias notas.</div>';
+        return;
+    }
+
+    // 1. Obtener promedio general (nuevo endpoint)
+    try {
+        const rf = await fetch(`${API}/notas/alumno/${alumnoId}/promedio-general`, {credentials:'same-origin'});
+        if (rf.ok) {
+            const d = await rf.json();
+            document.getElementById('acumulada-valor').textContent = d.promedioGeneral.toFixed(2);
+            document.getElementById('acumulada-box').classList.remove('hidden');
+        } else {
+            const err = await rf.json();
+            document.getElementById('notas-container').innerHTML =
+                `<div class="alert alert-error show">${err.error || err.mensaje || 'Acceso denegado'}</div>`;
+            document.getElementById('acumulada-box').classList.add('hidden');
+            return;
+        }
+    } catch(e) {}
+
+    // 2. Obtener y mostrar promedios por materia (NUEVO)
+    try {
+        const pm = await fetch(`${API}/notas/alumno/${alumnoId}/promedios-por-materia`, {credentials:'same-origin'});
+        if (pm.ok) {
+            const promedios = await pm.json();
+            mostrarPromediosPorMateria(promedios);
+        }
+    } catch(e) {}
+
+    // 3. Obtener lista de notas
+    try {
+        const r = await fetch(`${API}/notas/alumno/${alumnoId}`, {credentials:'same-origin'});
+        if (!r.ok) {
+            const err = await r.json();
+            document.getElementById('notas-container').innerHTML =
+                `<div class="alert alert-error show">${err.error || err.mensaje || 'Acceso denegado'}</div>`;
+            return;
+        }
+        const notas = await r.json();
+        renderTablaNotas(notas, alumnoId);
+    } catch(e) {
+        document.getElementById('notas-container').innerHTML = '<div class="alert alert-error show">Error al cargar notas</div>';
+    }
+}
+
+// NUEVA FUNCIÓN: Mostrar promedios por materia en tarjetas
+function mostrarPromediosPorMateria(promedios) {
+    const container = document.getElementById('promedios-materia-container');
+    
+    if (Object.keys(promedios).length === 0) {
+        container.innerHTML = '';
+        return;
+    }
+    
+    let html = `
+        <div style="background: #f0f7ff; border-radius:8px; padding:16px; border:1px solid #c3d7f5;">
+            <div style="font-weight:600; margin-bottom:12px; color:#003a6e;">Promedios por Materia</div>
+            <div style="display:flex; flex-wrap:wrap; gap:16px;">
+    `;
+    
+    for (const [materia, promedio] of Object.entries(promedios)) {
+        let clasePromedio = '';
+        if (promedio >= 3.5) clasePromedio = 'nota-alta';
+        else if (promedio >= 3.0) clasePromedio = 'nota-media';
+        else clasePromedio = 'nota-baja';
+        
+        html += `
+            <div class="promedio-card">
+                <div style="font-size:14px; color:#555;">${materia}</div>
+                <div class="nota-final ${clasePromedio}" style="font-size:20px; margin-top:6px;">${promedio.toFixed(2)}</div>
+            </div>
+        `;
+    }
+    
+    html += `</div></div>`;
+    container.innerHTML = html;
+}
+
+function renderTablaNotas(notas, alumnoId) {
+    const esProfesor = sesion.rol === 'PROFESOR';
+    const esAlumno = sesion.rol === 'ALUMNO';
+    let html = `<table><thead><tr>
+        <th>Materia</th><th>Observación</th><th>Valor</th><th>Porcentaje</th><th>Contribución</th>
+        <th>Acciones</th>
+    </tr></thead><tbody>`;
+    if (notas.length === 0) {
+        html += `<tr><td colspan="6" style="color:#999;text-align:center;padding:20px">No hay notas registradas</td></tr>`;
+    }
+    notas.forEach(n => {
+        const contrib = ((n.valor * n.porcentaje) / 100).toFixed(2);
+        html += `<tr>
+            <td>${n.materiaNombre || '—'}</td>
+            <td>${n.observacion}</td>
+            <td>${badgeNota(n.valor)}</td>
+            <td>${n.porcentaje}%</td>
+            <td><strong>${contrib}</strong></td>
+            <td><div class="td-actions">
+                ${esProfesor ? `
+                    <button class="btn btn-sm btn-primary" onclick='editarNota(${JSON.stringify(n).replace(/'/g, "&#39;")})'>Editar</button>
+                    <button class="btn btn-sm btn-danger" onclick="eliminarNota(${n.id},${alumnoId})">Eliminar</button>
+                ` : esAlumno ? `
+                    <button class="btn btn-sm btn-warning" onclick='intentarEditarNota(${JSON.stringify(n).replace(/'/g, "&#39;")})'>Intentar editar</button>
+                ` : ''}
+            </div></td>
+        </tr>`;
+    });
+    html += '</tbody></table>';
+    document.getElementById('notas-container').innerHTML = html;
+}
+
+function nuevaNota() {
+    limpiarFormNota();
+    document.getElementById('form-nota-titulo').textContent = 'Nueva nota';
+    document.getElementById('form-nota').classList.remove('hidden');
+}
+
+function editarNota(nota) {
+    document.getElementById('nota-id').value = nota.id;
+    document.getElementById('nota-alumno').value = nota.alumnoId;
+    document.getElementById('nota-materia').value = nota.materiaId;
+    document.getElementById('nota-valor').value = nota.valor;
+    document.getElementById('nota-porcentaje').value = nota.porcentaje;
+    document.getElementById('nota-observacion').value = nota.observacion;
+    document.getElementById('form-nota-titulo').textContent = 'Editar nota';
+    document.getElementById('form-nota').classList.remove('hidden');
+    document.getElementById('form-nota').scrollIntoView({behavior:'smooth'});
+}
+
+function cancelarNota() {
+    limpiarFormNota();
+}
+
+function limpiarFormNota() {
+    ['nota-id','nota-valor','nota-porcentaje','nota-observacion'].forEach(id => {
+        document.getElementById(id).value = '';
+    });
+    document.getElementById('nota-alumno').value = '';
+    document.getElementById('nota-materia').value = '';
+    document.getElementById('nota-alert').classList.remove('show');
+}
+
+async function guardarNota() {
+    const id = document.getElementById('nota-id').value;
+    const profesorId = sesion.rol === 'PROFESOR' ? sesion.id : null;
+    const body = {
+        alumnoId: parseInt(document.getElementById('nota-alumno').value),
+        materiaId: parseInt(document.getElementById('nota-materia').value),
+        profesorId: profesorId,
+        valor: parseFloat(document.getElementById('nota-valor').value),
+        porcentaje: parseFloat(document.getElementById('nota-porcentaje').value),
+        observacion: document.getElementById('nota-observacion').value
+    };
+    if (!body.alumnoId || !body.materiaId || !body.profesorId || isNaN(body.valor) || isNaN(body.porcentaje)) {
+        return showAlert('nota-alert', 'Complete todos los campos', 'error');
+    }
+    const url = id ? `${API}/notas/${id}` : `${API}/notas`;
+    const method = id ? 'PUT' : 'POST';
+    try {
+        const r = await fetch(url, {method, headers:{'Content-Type':'application/json'}, body: JSON.stringify(body)});
+        const data = await r.json();
+        if (!r.ok) return showAlert('nota-alert', data.mensaje || data.error || JSON.stringify(data), 'error');
+        showAlert('nota-alert', 'Nota guardada correctamente', 'success');
+        limpiarFormNota();
+        const alumnoId = document.getElementById('sel-alumno').value || body.alumnoId;
+        await cargarNotasYFinal(alumnoId);
+    } catch(e) { showAlert('nota-alert', 'Error de conexión', 'error'); }
+}
+
+async function eliminarNota(id, alumnoId) {
+    if (!confirm('¿Eliminar esta nota?')) return;
+    const r = await fetch(`${API}/notas/${id}`, {method:'DELETE'});
+    if (r.ok) {
+        await cargarNotasYFinal(alumnoId);
+    } else {
+        const d = await r.json();
+        alert(d.error || d.mensaje || 'Error al eliminar');
+    }
+}
+
+function intentarEditarNota(nota) {
+    const alertEl = document.getElementById('intento-editar-alert');
+    alertEl.className = 'alert alert-error show';
+    alertEl.innerHTML = ' <strong>Acción denegada:</strong> No puedes editar notas. Solo los profesores tienen permiso para modificar notas.';
+    setTimeout(() => alertEl.classList.remove('show'), 6000);
+}
+
+// ===================== UTILS =====================
+function badgeNota(valor) {
+    const clase = valor >= 3.5 ? 'nota-alta' : valor >= 3.0 ? 'nota-media' : 'nota-baja';
+    return `<span class="nota-final ${clase}">${valor.toFixed(1)}</span>`;
+}
+
+function showAlert(id, msg, tipo) {
+    const el = document.getElementById(id);
+    el.textContent = msg;
+    el.className = `alert alert-${tipo} show`;
+    setTimeout(() => el.classList.remove('show'), 5000);
+}
+
+// Verificar sesión al cargar (por si refresca la página)
+(async function() {
+    try {
+        const r = await fetch(`${API}/auth/sesion`, {credentials:'same-origin'});
+        if (r.ok) {
+            sesion = await r.json();
+            iniciarApp();
+        }
+    } catch(e) {}
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1397 @@
+2026-05-24 10:29:39.374 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-05-24 10:29:39.446 [main] INFO  e.j.e.EstudianteNotasApplication - Starting EstudianteNotasApplication using Java 21.0.10 with PID 21252 (C:\Users\brand\Downloads\estudiante_notas(2)\estudiante_notas\target\classes started by brand in C:\Users\brand\Downloads\estudiante_notas(2)\estudiante_notas)
+2026-05-24 10:29:39.447 [main] DEBUG e.j.e.EstudianteNotasApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-05-24 10:29:39.447 [main] INFO  e.j.e.EstudianteNotasApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-24 10:29:40.901 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-24 10:29:41.089 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 161 ms. Found 5 JPA repository interfaces.
+2026-05-24 10:29:42.575 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-05-24 10:29:42.592 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-05-24 10:29:42.597 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-24 10:29:42.597 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-05-24 10:29:42.710 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-24 10:29:42.712 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3172 ms
+2026-05-24 10:29:42.802 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-05-24 10:29:43.208 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:notasdb user=SA
+2026-05-24 10:29:43.210 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-05-24 10:29:43.230 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:notasdb'
+2026-05-24 10:29:43.686 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-24 10:29:43.920 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-05-24 10:29:44.028 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-05-24 10:29:44.363 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-24 10:29:44.423 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-24 10:29:45.796 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-24 10:29:45.864 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-24 10:29:47.614 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-24 10:29:47.709 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2026-05-24 10:29:48.893 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-05-24 10:29:48.978 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
+2026-05-24 10:29:49.006 [main] INFO  e.j.e.EstudianteNotasApplication - Started EstudianteNotasApplication in 10.408 seconds (process running for 10.979)
+2026-05-24 10:29:49.013 [main] INFO  e.j.e.config.DataInitializer - === Cargando datos de prueba ===
+2026-05-24 10:29:49.375 [main] INFO  e.j.e.config.DataInitializer - === Datos cargados correctamente ===
+2026-05-24 10:29:49.376 [main] INFO  e.j.e.config.DataInitializer - Profesor: profesor@javeriana.edu / prof123
+2026-05-24 10:29:49.376 [main] INFO  e.j.e.config.DataInitializer - Alumno:   alumno@javeriana.edu  / alumno123 (ID: 2)
+2026-05-24 10:29:57.661 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-24 10:29:57.662 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-24 10:29:57.666 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-05-24 10:30:01.327 [http-nio-8081-exec-3] ERROR e.j.e.aspecto.AspectExcepciones - [AOP-EXCEPCION] edu.javeriana.estudiante_notas.servicio.ServicioAuthImpl.login() lanzó: RuntimeException - Mensaje: Credenciales inválidas
+2026-05-24 10:30:01.327 [http-nio-8081-exec-3] ERROR e.j.e.aspecto.AspectExcepciones - [AOP-EXCEPCION] edu.javeriana.estudiante_notas.controlador.AuthControlador.login() lanzó: RuntimeException - Mensaje: Credenciales inválidas
+2026-05-24 10:30:01.337 [http-nio-8081-exec-3] WARN  e.j.e.aspecto.AspectExcepciones - [EXCEPCION-NEGOCIO] Credenciales inválidas
+2026-05-24 10:31:51.241 [http-nio-8081-exec-9] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2/nota-final
+2026-05-24 10:31:51.241 [http-nio-8081-exec-9] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getNotaFinal
+2026-05-24 10:31:51.284 [http-nio-8081-exec-10] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2
+2026-05-24 10:31:51.284 [http-nio-8081-exec-10] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getNotasByAlumno
+2026-05-24 10:32:51.363 [http-nio-8081-exec-3] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: PUT, Endpoint: /api/notas/3
+2026-05-24 10:32:51.363 [http-nio-8081-exec-3] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - updateNota
+2026-05-24 10:32:51.418 [http-nio-8081-exec-4] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2/nota-final
+2026-05-24 10:32:51.418 [http-nio-8081-exec-4] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getNotaFinal
+2026-05-24 10:32:51.622 [http-nio-8081-exec-6] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2
+2026-05-24 10:32:51.628 [http-nio-8081-exec-6] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getNotasByAlumno
+2026-05-24 10:33:10.182 [http-nio-8081-exec-5] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: POST, Endpoint: /api/notas
+2026-05-24 10:33:10.182 [http-nio-8081-exec-5] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - createNota
+2026-05-24 10:33:10.197 [http-nio-8081-exec-5] ERROR e.j.e.aspecto.AspectExcepciones - [AOP-EXCEPCION] edu.javeriana.estudiante_notas.servicio.ServicioNotaImpl.saveNota() lanzó: RuntimeException - Mensaje: La suma de porcentajes superaría el 100% (Actual: 95,0%, Nuevo: 20,0%)
+2026-05-24 10:33:10.197 [http-nio-8081-exec-5] ERROR e.j.e.aspecto.AspectExcepciones - [AOP-EXCEPCION] edu.javeriana.estudiante_notas.controlador.NotaControlador.createNota() lanzó: RuntimeException - Mensaje: La suma de porcentajes superaría el 100% (Actual: 95,0%, Nuevo: 20,0%)
+2026-05-24 10:33:10.200 [http-nio-8081-exec-5] WARN  e.j.e.aspecto.AspectExcepciones - [EXCEPCION-NEGOCIO] La suma de porcentajes superaría el 100% (Actual: 95,0%, Nuevo: 20,0%)
+2026-05-24 10:33:36.032 [http-nio-8081-exec-10] ERROR e.j.e.aspecto.AspectExcepciones - [AOP-EXCEPCION] edu.javeriana.estudiante_notas.servicio.ServicioAuthImpl.login() lanzó: RuntimeException - Mensaje: El usuario no tiene el rol 'ALUMNO'
+2026-05-24 10:33:36.032 [http-nio-8081-exec-10] ERROR e.j.e.aspecto.AspectExcepciones - [AOP-EXCEPCION] edu.javeriana.estudiante_notas.controlador.AuthControlador.login() lanzó: RuntimeException - Mensaje: El usuario no tiene el rol 'ALUMNO'
+2026-05-24 10:33:36.032 [http-nio-8081-exec-10] WARN  e.j.e.aspecto.AspectExcepciones - [EXCEPCION-NEGOCIO] El usuario no tiene el rol 'ALUMNO'
+2026-05-24 10:38:57.258 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-05-24 10:38:57.329 [main] INFO  e.j.e.EstudianteNotasApplication - Starting EstudianteNotasApplication using Java 21.0.10 with PID 21032 (C:\Users\brand\Downloads\estudiante_notas(2)\estudiante_notas\target\classes started by brand in C:\Users\brand\Downloads\estudiante_notas(2)\estudiante_notas)
+2026-05-24 10:38:57.329 [main] DEBUG e.j.e.EstudianteNotasApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-05-24 10:38:57.340 [main] INFO  e.j.e.EstudianteNotasApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-24 10:38:58.647 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-24 10:38:58.800 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 130 ms. Found 5 JPA repository interfaces.
+2026-05-24 10:39:00.353 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-05-24 10:39:00.372 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-05-24 10:39:00.376 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-24 10:39:00.376 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-05-24 10:39:00.516 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-24 10:39:00.516 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3110 ms
+2026-05-24 10:39:00.623 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-05-24 10:39:01.027 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:notasdb user=SA
+2026-05-24 10:39:01.037 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-05-24 10:39:01.066 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:notasdb'
+2026-05-24 10:39:01.585 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-24 10:39:01.921 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-05-24 10:39:02.088 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-05-24 10:39:02.505 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-24 10:39:02.568 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-24 10:39:03.918 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-24 10:39:03.992 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-24 10:39:04.019 [main] INFO  e.j.e.aspecto.AspectControlAcceso - AspectControlAcceso cargado correctamente
+2026-05-24 10:39:05.708 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-24 10:39:05.794 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2026-05-24 10:39:06.961 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-05-24 10:39:07.031 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
+2026-05-24 10:39:07.054 [main] INFO  e.j.e.EstudianteNotasApplication - Started EstudianteNotasApplication in 10.542 seconds (process running for 11.114)
+2026-05-24 10:39:07.062 [main] INFO  e.j.e.config.DataInitializer - === Cargando datos de prueba ===
+2026-05-24 10:39:07.341 [main] INFO  e.j.e.config.DataInitializer - === Datos cargados correctamente ===
+2026-05-24 10:39:07.341 [main] INFO  e.j.e.config.DataInitializer - Profesor: profesor@javeriana.edu / prof123
+2026-05-24 10:39:07.341 [main] INFO  e.j.e.config.DataInitializer - Alumno:   alumno@javeriana.edu  / alumno123 (ID: 2)
+2026-05-24 10:39:15.613 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-24 10:39:15.613 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-24 10:39:15.613 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-05-24 10:43:33.012 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-05-24 10:43:33.070 [main] INFO  e.j.e.EstudianteNotasApplication - Starting EstudianteNotasApplication using Java 21.0.10 with PID 784 (C:\Users\brand\Downloads\estudiante_notas(2)\estudiante_notas\target\classes started by brand in C:\Users\brand\Downloads\estudiante_notas(2)\estudiante_notas)
+2026-05-24 10:43:33.070 [main] DEBUG e.j.e.EstudianteNotasApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-05-24 10:43:33.070 [main] INFO  e.j.e.EstudianteNotasApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-24 10:43:34.604 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-24 10:43:34.745 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 121 ms. Found 5 JPA repository interfaces.
+2026-05-24 10:43:36.232 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-05-24 10:43:36.255 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-05-24 10:43:36.264 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-24 10:43:36.264 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-05-24 10:43:36.377 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-24 10:43:36.377 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3227 ms
+2026-05-24 10:43:36.494 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-05-24 10:43:36.899 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:notasdb user=SA
+2026-05-24 10:43:36.899 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-05-24 10:43:36.934 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:notasdb'
+2026-05-24 10:43:37.509 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-24 10:43:37.820 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-05-24 10:43:37.922 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-05-24 10:43:38.319 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-24 10:43:38.381 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-24 10:43:39.676 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-24 10:43:39.751 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-24 10:43:41.452 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-24 10:43:41.570 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2026-05-24 10:43:42.744 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-05-24 10:43:42.827 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
+2026-05-24 10:43:42.854 [main] INFO  e.j.e.EstudianteNotasApplication - Started EstudianteNotasApplication in 10.587 seconds (process running for 11.104)
+2026-05-24 10:43:42.868 [main] INFO  e.j.e.config.DataInitializer - === Cargando datos de prueba ===
+2026-05-24 10:43:43.314 [main] INFO  e.j.e.config.DataInitializer - === Datos cargados correctamente ===
+2026-05-24 10:43:43.314 [main] INFO  e.j.e.config.DataInitializer - Profesor: profesor@javeriana.edu / prof123
+2026-05-24 10:43:43.314 [main] INFO  e.j.e.config.DataInitializer - Alumno:   alumno@javeriana.edu  / alumno123 (ID: 2)
+2026-05-24 10:43:47.177 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-24 10:43:47.177 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-24 10:43:47.177 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-05-24 10:45:33.992 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-05-24 10:45:34.055 [main] INFO  e.j.e.EstudianteNotasApplication - Starting EstudianteNotasApplication using Java 21.0.10 with PID 26836 (C:\Users\brand\Downloads\estudiante_notas(2)\estudiante_notas\target\classes started by brand in C:\Users\brand\Downloads\estudiante_notas(2)\estudiante_notas)
+2026-05-24 10:45:34.055 [main] DEBUG e.j.e.EstudianteNotasApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-05-24 10:45:34.055 [main] INFO  e.j.e.EstudianteNotasApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-24 10:45:35.483 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-24 10:45:35.689 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 180 ms. Found 5 JPA repository interfaces.
+2026-05-24 10:45:37.275 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-05-24 10:45:37.299 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-05-24 10:45:37.301 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-24 10:45:37.301 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-05-24 10:45:37.452 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-24 10:45:37.452 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3334 ms
+2026-05-24 10:45:37.548 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-05-24 10:45:37.906 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:notasdb user=SA
+2026-05-24 10:45:37.906 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-05-24 10:45:37.937 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:notasdb'
+2026-05-24 10:45:38.511 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-24 10:45:38.724 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-05-24 10:45:38.809 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-05-24 10:45:39.174 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-24 10:45:39.238 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-24 10:45:40.580 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-24 10:45:40.655 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-24 10:45:42.641 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-24 10:45:42.741 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2026-05-24 10:45:44.102 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-05-24 10:45:44.198 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
+2026-05-24 10:45:44.225 [main] INFO  e.j.e.EstudianteNotasApplication - Started EstudianteNotasApplication in 10.963 seconds (process running for 11.51)
+2026-05-24 10:45:44.237 [main] INFO  e.j.e.config.DataInitializer - === Cargando datos de prueba ===
+2026-05-24 10:45:44.674 [main] INFO  e.j.e.config.DataInitializer - === Datos cargados correctamente ===
+2026-05-24 10:45:44.674 [main] INFO  e.j.e.config.DataInitializer - Profesor: profesor@javeriana.edu / prof123
+2026-05-24 10:45:44.674 [main] INFO  e.j.e.config.DataInitializer - Alumno:   alumno@javeriana.edu  / alumno123 (ID: 2)
+2026-05-24 10:46:32.328 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-24 10:46:32.329 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-24 10:46:32.331 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-05-24 10:46:32.557 [http-nio-8081-exec-2] ERROR e.j.e.aspecto.AspectExcepciones - [EXCEPCION-GENERAL] Excepción no controlada: No static resource favicon.ico.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2026-05-24 10:46:58.757 [http-nio-8081-exec-4] ERROR e.j.e.aspecto.AspectExcepciones - [EXCEPCION-GENERAL] Excepción no controlada: No static resource favicon.ico.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2026-05-24 10:47:14.189 [http-nio-8081-exec-7] ERROR e.j.e.aspecto.AspectExcepciones - [AOP-EXCEPCION] edu.javeriana.estudiante_notas.servicio.ServicioAuthImpl.login() lanzó: RuntimeException - Mensaje: El usuario no tiene el rol 'ALUMNO'
+2026-05-24 10:47:14.192 [http-nio-8081-exec-7] ERROR e.j.e.aspecto.AspectExcepciones - [AOP-EXCEPCION] edu.javeriana.estudiante_notas.controlador.AuthControlador.login() lanzó: RuntimeException - Mensaje: El usuario no tiene el rol 'ALUMNO'
+2026-05-24 10:47:14.194 [http-nio-8081-exec-7] WARN  e.j.e.aspecto.AspectExcepciones - [EXCEPCION-NEGOCIO] El usuario no tiene el rol 'ALUMNO'
+2026-05-24 10:47:50.893 [http-nio-8081-exec-8] ERROR e.j.e.aspecto.AspectExcepciones - [AOP-EXCEPCION] edu.javeriana.estudiante_notas.servicio.ServicioAuthImpl.login() lanzó: RuntimeException - Mensaje: El usuario no tiene el rol 'ALUMNO'
+2026-05-24 10:47:50.893 [http-nio-8081-exec-8] ERROR e.j.e.aspecto.AspectExcepciones - [AOP-EXCEPCION] edu.javeriana.estudiante_notas.controlador.AuthControlador.login() lanzó: RuntimeException - Mensaje: El usuario no tiene el rol 'ALUMNO'
+2026-05-24 10:47:50.893 [http-nio-8081-exec-8] WARN  e.j.e.aspecto.AspectExcepciones - [EXCEPCION-NEGOCIO] El usuario no tiene el rol 'ALUMNO'
+2026-05-24 10:49:17.000 [http-nio-8081-exec-9] ERROR e.j.e.aspecto.AspectExcepciones - [AOP-EXCEPCION] edu.javeriana.estudiante_notas.servicio.ServicioAuthImpl.login() lanzó: RuntimeException - Mensaje: El usuario no tiene el rol 'ALUMNO'
+2026-05-24 10:49:17.000 [http-nio-8081-exec-9] ERROR e.j.e.aspecto.AspectExcepciones - [AOP-EXCEPCION] edu.javeriana.estudiante_notas.controlador.AuthControlador.login() lanzó: RuntimeException - Mensaje: El usuario no tiene el rol 'ALUMNO'
+2026-05-24 10:49:17.000 [http-nio-8081-exec-9] WARN  e.j.e.aspecto.AspectExcepciones - [EXCEPCION-NEGOCIO] El usuario no tiene el rol 'ALUMNO'
+2026-05-24 10:52:15.689 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-05-24 10:52:15.759 [main] INFO  e.j.e.EstudianteNotasApplication - Starting EstudianteNotasApplication using Java 21.0.10 with PID 11596 (C:\Users\brand\Downloads\estudiante_notas(2)\estudiante_notas\target\classes started by brand in C:\Users\brand\Downloads\estudiante_notas(2)\estudiante_notas)
+2026-05-24 10:52:15.759 [main] DEBUG e.j.e.EstudianteNotasApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-05-24 10:52:15.765 [main] INFO  e.j.e.EstudianteNotasApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-24 10:52:17.100 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-24 10:52:17.280 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 156 ms. Found 5 JPA repository interfaces.
+2026-05-24 10:52:18.520 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-05-24 10:52:18.532 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-05-24 10:52:18.536 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-24 10:52:18.536 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-05-24 10:52:18.676 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-24 10:52:18.679 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2841 ms
+2026-05-24 10:52:18.748 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-05-24 10:52:19.072 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:notasdb user=SA
+2026-05-24 10:52:19.072 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-05-24 10:52:19.106 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:notasdb'
+2026-05-24 10:52:19.541 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-24 10:52:19.693 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-05-24 10:52:19.772 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-05-24 10:52:20.278 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-24 10:52:20.352 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-24 10:52:21.651 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-24 10:52:21.804 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-24 10:52:22.552 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-24 10:52:22.576 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2026-05-24 10:52:23.053 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-05-24 10:52:23.093 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
+2026-05-24 10:52:23.114 [main] INFO  e.j.e.EstudianteNotasApplication - Started EstudianteNotasApplication in 8.181 seconds (process running for 8.707)
+2026-05-24 10:52:23.127 [main] INFO  e.j.e.config.DataInitializer - === Cargando datos de prueba ===
+2026-05-24 10:52:23.281 [main] INFO  e.j.e.config.DataInitializer - === Datos cargados correctamente ===
+2026-05-24 10:52:23.281 [main] INFO  e.j.e.config.DataInitializer - Profesor: profesor@javeriana.edu / prof123
+2026-05-24 10:52:23.281 [main] INFO  e.j.e.config.DataInitializer - Alumno:   alumno@javeriana.edu  / alumno123 (ID: 2)
+2026-05-24 10:52:29.890 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-24 10:52:29.890 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-24 10:52:29.890 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-05-24 10:52:32.938 [http-nio-8081-exec-3] ERROR e.j.e.aspecto.AspectExcepciones - [AOP-EXCEPCION] edu.javeriana.estudiante_notas.servicio.ServicioAuthImpl.login() lanzó: RuntimeException - Mensaje: El usuario no tiene el rol 'ALUMNO'
+2026-05-24 10:52:32.938 [http-nio-8081-exec-3] WARN  e.j.e.aspecto.AspectExcepciones - [EXCEPCION-NEGOCIO] El usuario no tiene el rol 'ALUMNO'
+2026-05-24 10:52:56.476 [http-nio-8081-exec-4] ERROR e.j.e.aspecto.AspectExcepciones - [AOP-EXCEPCION] edu.javeriana.estudiante_notas.servicio.ServicioAuthImpl.login() lanzó: RuntimeException - Mensaje: Credenciales inválidas
+2026-05-24 10:52:56.491 [http-nio-8081-exec-4] WARN  e.j.e.aspecto.AspectExcepciones - [EXCEPCION-NEGOCIO] Credenciales inválidas
+2026-05-24 11:20:56.732 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-05-24 11:20:56.771 [main] INFO  e.j.e.EstudianteNotasApplication - Starting EstudianteNotasApplication using Java 21.0.10 with PID 32744 (C:\Users\brand\Downloads\estudiante_notas(2)\estudiante_notas\target\classes started by brand in C:\Users\brand\Downloads\estudiante_notas(2)\estudiante_notas)
+2026-05-24 11:20:56.772 [main] DEBUG e.j.e.EstudianteNotasApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-05-24 11:20:56.772 [main] INFO  e.j.e.EstudianteNotasApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-24 11:20:57.579 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-24 11:20:57.657 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 67 ms. Found 5 JPA repository interfaces.
+2026-05-24 11:20:58.289 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-05-24 11:20:58.300 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-05-24 11:20:58.302 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-24 11:20:58.303 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-05-24 11:20:58.352 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-24 11:20:58.352 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1542 ms
+2026-05-24 11:20:58.387 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-05-24 11:20:58.568 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:notasdb user=SA
+2026-05-24 11:20:58.568 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-05-24 11:20:58.583 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:notasdb'
+2026-05-24 11:20:58.760 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-24 11:20:58.822 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-05-24 11:20:58.862 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-05-24 11:20:59.089 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-24 11:20:59.130 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-24 11:20:59.898 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-24 11:20:59.942 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-24 11:21:00.374 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-24 11:21:00.399 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2026-05-24 11:21:00.732 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-05-24 11:21:00.778 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
+2026-05-24 11:21:00.786 [main] INFO  e.j.e.EstudianteNotasApplication - Started EstudianteNotasApplication in 4.516 seconds (process running for 4.885)
+2026-05-24 11:21:00.792 [main] INFO  e.j.e.config.DataInitializer - === Cargando datos de prueba ===
+2026-05-24 11:21:00.887 [main] INFO  e.j.e.config.DataInitializer - === Datos cargados correctamente ===
+2026-05-24 11:21:00.888 [main] INFO  e.j.e.config.DataInitializer - Profesor: profesor@javeriana.edu / prof123
+2026-05-24 11:21:00.888 [main] INFO  e.j.e.config.DataInitializer - Alumno:   alumno@javeriana.edu  / alumno123 (ID: 2)
+2026-05-24 11:21:06.292 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-24 11:21:06.292 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-24 11:21:06.292 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-05-24 11:21:09.709 [http-nio-8081-exec-6] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-24 11:21:09.712 [http-nio-8081-exec-6] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 25.0% (debería ser 100%)
+2026-05-24 11:21:16.963 [http-nio-8081-exec-8] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2/promedios-por-materia
+2026-05-24 11:21:16.963 [http-nio-8081-exec-8] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getPromediosPorMateria
+2026-05-24 11:21:16.967 [http-nio-8081-exec-8] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-24 11:21:16.967 [http-nio-8081-exec-8] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 25.0% (debería ser 100%)
+2026-05-24 11:45:04.683 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=18m32s762ms146µs500ns).
+2026-05-24 11:52:43.993 [http-nio-8081-exec-1] WARN  e.j.e.aspecto.AspectExcepciones - [EXCEPCION-NEGOCIO] Could not write JSON: class java.lang.String cannot be cast to class java.lang.Double (java.lang.String and java.lang.Double are in module java.base of loader 'bootstrap')
+2026-05-24 11:52:51.641 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-05-24 11:52:51.689 [main] INFO  e.j.e.EstudianteNotasApplication - Starting EstudianteNotasApplication using Java 21.0.10 with PID 18908 (C:\Users\brand\Downloads\estudiante_notas(2)\estudiante_notas\target\classes started by brand in C:\Users\brand\Downloads\estudiante_notas(2)\estudiante_notas)
+2026-05-24 11:52:51.691 [main] DEBUG e.j.e.EstudianteNotasApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-05-24 11:52:51.691 [main] INFO  e.j.e.EstudianteNotasApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-24 11:52:52.414 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-24 11:52:52.505 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 79 ms. Found 5 JPA repository interfaces.
+2026-05-24 11:52:53.234 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-05-24 11:52:53.252 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-05-24 11:52:53.253 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-24 11:52:53.253 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-05-24 11:52:53.336 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-24 11:52:53.336 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1601 ms
+2026-05-24 11:52:53.370 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-05-24 11:52:53.567 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:notasdb user=SA
+2026-05-24 11:52:53.571 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-05-24 11:52:53.584 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:notasdb'
+2026-05-24 11:52:53.758 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-24 11:52:53.823 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-05-24 11:52:53.875 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-05-24 11:52:54.116 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-24 11:52:54.160 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-24 11:52:54.977 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-24 11:52:55.029 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-24 11:52:55.454 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-24 11:52:55.473 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2026-05-24 11:52:55.776 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-05-24 11:52:55.806 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
+2026-05-24 11:52:55.811 [main] INFO  e.j.e.EstudianteNotasApplication - Started EstudianteNotasApplication in 4.694 seconds (process running for 5.073)
+2026-05-24 11:52:55.818 [main] INFO  e.j.e.config.DataInitializer - === Cargando datos de prueba ===
+2026-05-24 11:52:55.928 [main] INFO  e.j.e.config.DataInitializer - === Datos cargados correctamente ===
+2026-05-24 11:52:55.928 [main] INFO  e.j.e.config.DataInitializer - Profesor: profesor@javeriana.edu / prof123
+2026-05-24 11:52:55.928 [main] INFO  e.j.e.config.DataInitializer - Alumno:   alumno@javeriana.edu  / alumno123 (ID: 2)
+2026-05-24 11:52:59.215 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-24 11:52:59.215 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-24 11:52:59.223 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2026-05-24 11:53:01.587 [http-nio-8081-exec-6] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-24 11:53:01.587 [http-nio-8081-exec-6] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 25.0% (debería ser 100%)
+2026-05-24 11:53:03.042 [http-nio-8081-exec-8] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2/promedio-general
+2026-05-24 11:53:03.042 [http-nio-8081-exec-8] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getPromedioGeneral
+2026-05-24 11:53:03.050 [http-nio-8081-exec-8] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-24 11:53:03.050 [http-nio-8081-exec-8] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 25.0% (debería ser 100%)
+2026-05-24 11:53:03.071 [http-nio-8081-exec-9] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2/promedios-por-materia
+2026-05-24 11:53:03.071 [http-nio-8081-exec-9] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getPromediosPorMateria
+2026-05-24 11:53:03.081 [http-nio-8081-exec-9] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-24 11:53:03.081 [http-nio-8081-exec-9] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 25.0% (debería ser 100%)
+2026-05-24 11:53:03.097 [http-nio-8081-exec-10] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2
+2026-05-24 11:53:03.099 [http-nio-8081-exec-10] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getNotasByAlumno
+2026-05-24 11:53:07.239 [http-nio-8081-exec-1] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/3/promedio-general
+2026-05-24 11:53:07.239 [http-nio-8081-exec-1] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getPromedioGeneral
+2026-05-24 11:53:07.270 [http-nio-8081-exec-2] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/3/promedios-por-materia
+2026-05-24 11:53:07.270 [http-nio-8081-exec-2] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getPromediosPorMateria
+2026-05-24 11:53:07.283 [http-nio-8081-exec-4] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/3
+2026-05-24 11:53:07.283 [http-nio-8081-exec-4] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getNotasByAlumno
+2026-05-24 11:53:11.427 [http-nio-8081-exec-3] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2/promedio-general
+2026-05-24 11:53:11.427 [http-nio-8081-exec-3] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getPromedioGeneral
+2026-05-24 11:53:11.427 [http-nio-8081-exec-3] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-24 11:53:11.427 [http-nio-8081-exec-3] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 25.0% (debería ser 100%)
+2026-05-24 11:53:11.451 [http-nio-8081-exec-5] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2/promedios-por-materia
+2026-05-24 11:53:11.451 [http-nio-8081-exec-5] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getPromediosPorMateria
+2026-05-24 11:53:11.468 [http-nio-8081-exec-5] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-24 11:53:11.468 [http-nio-8081-exec-5] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 25.0% (debería ser 100%)
+2026-05-24 11:53:11.479 [http-nio-8081-exec-6] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2
+2026-05-24 11:53:11.483 [http-nio-8081-exec-6] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getNotasByAlumno
+2026-05-24 11:53:15.935 [http-nio-8081-exec-7] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/3/promedios-por-materia
+2026-05-24 11:53:15.937 [http-nio-8081-exec-7] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getPromediosPorMateria
+2026-05-24 11:53:40.810 [http-nio-8081-exec-8] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: PUT, Endpoint: /api/notas/3
+2026-05-24 11:53:40.810 [http-nio-8081-exec-8] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - updateNota
+2026-05-24 11:53:40.846 [http-nio-8081-exec-8] WARN  e.j.e.aspecto.AspectExcepciones - [EXCEPCION-NEGOCIO] La suma de porcentajes superaría el 100% (Actual: 70,0%, Nuevo: 80,0%)
+2026-05-24 11:53:56.617 [http-nio-8081-exec-9] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: PUT, Endpoint: /api/notas/3
+2026-05-24 11:53:56.617 [http-nio-8081-exec-9] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - updateNota
+2026-05-24 11:53:56.636 [http-nio-8081-exec-9] WARN  e.j.e.aspecto.AspectExcepciones - [EXCEPCION-NEGOCIO] La suma de porcentajes superaría el 100% (Actual: 70,0%, Nuevo: 80,0%)
+2026-05-24 11:54:13.369 [http-nio-8081-exec-10] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2/promedios-por-materia
+2026-05-24 11:54:13.369 [http-nio-8081-exec-10] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getPromediosPorMateria
+2026-05-24 11:54:13.380 [http-nio-8081-exec-10] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-24 11:54:13.380 [http-nio-8081-exec-10] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 25.0% (debería ser 100%)
+2026-05-24 12:04:12.557 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-05-24 12:04:12.619 [main] INFO  e.j.e.EstudianteNotasApplication - Starting EstudianteNotasApplication using Java 21.0.10 with PID 11936 (C:\Users\brand\Downloads\estudiante_notas(2)\estudiante_notas\target\classes started by brand in C:\Users\brand\Downloads\estudiante_notas(2)\estudiante_notas)
+2026-05-24 12:04:12.620 [main] DEBUG e.j.e.EstudianteNotasApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-05-24 12:04:12.621 [main] INFO  e.j.e.EstudianteNotasApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-24 12:04:14.006 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-24 12:04:14.142 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 121 ms. Found 5 JPA repository interfaces.
+2026-05-24 12:04:15.380 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-05-24 12:04:15.396 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-05-24 12:04:15.400 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-24 12:04:15.401 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-05-24 12:04:15.558 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-24 12:04:15.560 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2868 ms
+2026-05-24 12:04:15.616 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-05-24 12:04:15.932 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:notasdb user=SA
+2026-05-24 12:04:15.936 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-05-24 12:04:15.959 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:notasdb'
+2026-05-24 12:04:16.326 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-24 12:04:16.559 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-05-24 12:04:16.640 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-05-24 12:04:16.994 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-24 12:04:17.064 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-24 12:04:18.395 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-24 12:04:18.474 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-24 12:04:19.309 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-24 12:04:19.343 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2026-05-24 12:04:19.978 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-05-24 12:04:20.035 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
+2026-05-24 12:04:20.052 [main] INFO  e.j.e.EstudianteNotasApplication - Started EstudianteNotasApplication in 8.243 seconds (process running for 8.801)
+2026-05-24 12:04:20.061 [main] INFO  e.j.e.config.DataInitializer - === Cargando datos de prueba ===
+2026-05-24 12:04:20.270 [main] INFO  e.j.e.config.DataInitializer - === Datos cargados correctamente ===
+2026-05-24 12:04:20.270 [main] INFO  e.j.e.config.DataInitializer - Profesor: profesor@javeriana.edu / prof123
+2026-05-24 12:04:20.270 [main] INFO  e.j.e.config.DataInitializer - Alumno:   alumno@javeriana.edu  / alumno123 (ID: 2)
+2026-05-24 12:04:25.062 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-24 12:04:25.062 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-24 12:04:25.062 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-05-24 12:04:27.285 [http-nio-8081-exec-9] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-24 12:04:27.285 [http-nio-8081-exec-9] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 25.0% (debería ser 100%)
+2026-05-24 12:04:30.497 [http-nio-8081-exec-5] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2/promedio-general
+2026-05-24 12:04:30.497 [http-nio-8081-exec-5] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getPromedioGeneral
+2026-05-24 12:04:30.497 [http-nio-8081-exec-5] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-24 12:04:30.497 [http-nio-8081-exec-5] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 25.0% (debería ser 100%)
+2026-05-24 12:04:30.529 [http-nio-8081-exec-6] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2/promedios-por-materia
+2026-05-24 12:04:30.529 [http-nio-8081-exec-6] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getPromediosPorMateria
+2026-05-24 12:04:30.545 [http-nio-8081-exec-6] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-24 12:04:30.545 [http-nio-8081-exec-6] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 25.0% (debería ser 100%)
+2026-05-24 12:04:30.566 [http-nio-8081-exec-4] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2
+2026-05-24 12:04:30.566 [http-nio-8081-exec-4] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getNotasByAlumno
+2026-05-24 12:04:41.095 [http-nio-8081-exec-1] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: PUT, Endpoint: /api/notas/3
+2026-05-24 12:04:41.099 [http-nio-8081-exec-1] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - updateNota
+2026-05-24 12:04:41.170 [http-nio-8081-exec-2] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2/promedio-general
+2026-05-24 12:04:41.170 [http-nio-8081-exec-2] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getPromedioGeneral
+2026-05-24 12:04:41.183 [http-nio-8081-exec-2] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-24 12:04:41.183 [http-nio-8081-exec-2] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 80.0% (debería ser 100%)
+2026-05-24 12:04:41.205 [http-nio-8081-exec-3] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2/promedios-por-materia
+2026-05-24 12:04:41.205 [http-nio-8081-exec-3] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getPromediosPorMateria
+2026-05-24 12:04:41.214 [http-nio-8081-exec-3] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-24 12:04:41.214 [http-nio-8081-exec-3] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 80.0% (debería ser 100%)
+2026-05-24 12:04:41.231 [http-nio-8081-exec-8] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2
+2026-05-24 12:04:41.231 [http-nio-8081-exec-8] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getNotasByAlumno
+2026-05-24 12:04:50.606 [http-nio-8081-exec-7] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2/promedios-por-materia
+2026-05-24 12:04:50.606 [http-nio-8081-exec-7] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getPromediosPorMateria
+2026-05-24 12:04:50.621 [http-nio-8081-exec-7] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-24 12:04:50.621 [http-nio-8081-exec-7] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 80.0% (debería ser 100%)
+2026-05-24 12:04:53.664 [http-nio-8081-exec-9] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2/promedios-por-materia
+2026-05-24 12:04:53.664 [http-nio-8081-exec-9] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getPromediosPorMateria
+2026-05-24 12:04:53.673 [http-nio-8081-exec-9] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-24 12:04:53.673 [http-nio-8081-exec-9] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 80.0% (debería ser 100%)
+2026-05-24 12:05:17.606 [http-nio-8081-exec-10] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2/promedios-por-materia
+2026-05-24 12:05:17.606 [http-nio-8081-exec-10] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getPromediosPorMateria
+2026-05-24 12:05:17.622 [http-nio-8081-exec-10] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-24 12:05:17.622 [http-nio-8081-exec-10] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 80.0% (debería ser 100%)
+2026-05-24 12:05:29.713 [http-nio-8081-exec-5] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/3/promedios-por-materia
+2026-05-24 12:05:29.713 [http-nio-8081-exec-5] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getPromediosPorMateria
+2026-05-24 12:05:31.648 [http-nio-8081-exec-4] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2/promedios-por-materia
+2026-05-24 12:05:31.648 [http-nio-8081-exec-4] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getPromediosPorMateria
+2026-05-24 12:05:31.664 [http-nio-8081-exec-4] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-24 12:05:31.664 [http-nio-8081-exec-4] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 80.0% (debería ser 100%)
+2026-05-24 12:06:59.748 [http-nio-8081-exec-9] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-24 12:06:59.748 [http-nio-8081-exec-9] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 80.0% (debería ser 100%)
+2026-05-24 12:07:06.395 [http-nio-8081-exec-5] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2/promedio-general
+2026-05-24 12:07:06.395 [http-nio-8081-exec-5] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getPromedioGeneral
+2026-05-24 12:07:06.395 [http-nio-8081-exec-5] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-24 12:07:06.404 [http-nio-8081-exec-5] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 80.0% (debería ser 100%)
+2026-05-24 12:07:06.423 [http-nio-8081-exec-6] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2/promedios-por-materia
+2026-05-24 12:07:06.423 [http-nio-8081-exec-6] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getPromediosPorMateria
+2026-05-24 12:07:06.431 [http-nio-8081-exec-6] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-24 12:07:06.432 [http-nio-8081-exec-6] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 80.0% (debería ser 100%)
+2026-05-24 12:07:06.448 [http-nio-8081-exec-4] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2
+2026-05-24 12:07:06.448 [http-nio-8081-exec-4] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getNotasByAlumno
+2026-05-24 12:07:40.703 [http-nio-8081-exec-1] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: POST, Endpoint: /api/notas
+2026-05-24 12:07:40.703 [http-nio-8081-exec-1] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - createNota
+2026-05-24 12:07:40.712 [http-nio-8081-exec-1] INFO  e.j.e.servicio.ServicioNotaImpl - ✅ La materia 'Teoría de la Computación' ha alcanzado el 100% de porcentaje para el alumno ID: 2
+2026-05-24 12:07:40.737 [http-nio-8081-exec-2] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2/promedio-general
+2026-05-24 12:07:40.737 [http-nio-8081-exec-2] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getPromedioGeneral
+2026-05-24 12:07:40.745 [http-nio-8081-exec-2] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 80.0% (debería ser 100%)
+2026-05-24 12:07:40.761 [http-nio-8081-exec-3] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2/promedios-por-materia
+2026-05-24 12:07:40.761 [http-nio-8081-exec-3] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getPromediosPorMateria
+2026-05-24 12:07:40.773 [http-nio-8081-exec-3] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 80.0% (debería ser 100%)
+2026-05-24 12:07:40.792 [http-nio-8081-exec-7] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2
+2026-05-24 12:07:40.792 [http-nio-8081-exec-7] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getNotasByAlumno
+2026-05-24 12:07:54.195 [http-nio-8081-exec-6] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 80.0% (debería ser 100%)
+2026-05-24 12:08:09.570 [http-nio-8081-exec-1] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2/promedio-general
+2026-05-24 12:08:09.570 [http-nio-8081-exec-1] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getPromedioGeneral
+2026-05-24 12:08:09.577 [http-nio-8081-exec-1] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 80.0% (debería ser 100%)
+2026-05-24 12:08:09.608 [http-nio-8081-exec-2] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2/promedios-por-materia
+2026-05-24 12:08:09.608 [http-nio-8081-exec-2] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getPromediosPorMateria
+2026-05-24 12:08:09.608 [http-nio-8081-exec-2] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 80.0% (debería ser 100%)
+2026-05-24 12:08:09.626 [http-nio-8081-exec-3] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2
+2026-05-24 12:08:09.626 [http-nio-8081-exec-3] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getNotasByAlumno
+2026-05-24 12:08:17.699 [http-nio-8081-exec-7] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: PUT, Endpoint: /api/notas/2
+2026-05-24 12:08:17.699 [http-nio-8081-exec-7] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - updateNota
+2026-05-24 12:08:17.716 [http-nio-8081-exec-7] INFO  e.j.e.servicio.ServicioNotaImpl - ✅ La materia 'Teoría de la Computación' ha alcanzado el 100% de porcentaje para el alumno ID: 2
+2026-05-24 12:08:17.734 [http-nio-8081-exec-8] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2/promedio-general
+2026-05-24 12:08:17.734 [http-nio-8081-exec-8] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getPromedioGeneral
+2026-05-24 12:08:17.736 [http-nio-8081-exec-8] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 80.0% (debería ser 100%)
+2026-05-24 12:08:17.759 [http-nio-8081-exec-9] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2/promedios-por-materia
+2026-05-24 12:08:17.759 [http-nio-8081-exec-9] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getPromediosPorMateria
+2026-05-24 12:08:17.769 [http-nio-8081-exec-9] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 80.0% (debería ser 100%)
+2026-05-24 12:08:17.784 [http-nio-8081-exec-5] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2
+2026-05-24 12:08:17.784 [http-nio-8081-exec-5] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getNotasByAlumno
+2026-05-24 12:08:27.200 [http-nio-8081-exec-4] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 80.0% (debería ser 100%)
+2026-05-24 14:39:30.465 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-05-24 14:39:30.503 [main] INFO  e.j.e.EstudianteNotasApplication - Starting EstudianteNotasApplication using Java 21.0.10 with PID 2600 (C:\Users\brand\Downloads\estudiante_notas(2)\estudiante_notas\target\classes started by brand in C:\Users\brand\Downloads\estudiante_notas(2)\estudiante_notas)
+2026-05-24 14:39:30.504 [main] DEBUG e.j.e.EstudianteNotasApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-05-24 14:39:30.504 [main] INFO  e.j.e.EstudianteNotasApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-24 14:39:31.220 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-24 14:39:31.303 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 74 ms. Found 5 JPA repository interfaces.
+2026-05-24 14:39:31.998 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-05-24 14:39:32.014 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-05-24 14:39:32.018 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-24 14:39:32.018 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-05-24 14:39:32.069 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-24 14:39:32.069 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1526 ms
+2026-05-24 14:39:32.106 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-05-24 14:39:32.296 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:notasdb user=SA
+2026-05-24 14:39:32.298 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-05-24 14:39:32.313 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:notasdb'
+2026-05-24 14:39:32.487 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-24 14:39:32.554 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-05-24 14:39:32.602 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-05-24 14:39:32.842 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-24 14:39:32.888 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-24 14:39:33.641 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-24 14:39:33.686 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-24 14:39:34.201 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-24 14:39:34.225 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2026-05-24 14:39:34.601 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-05-24 14:39:34.636 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
+2026-05-24 14:39:34.647 [main] INFO  e.j.e.EstudianteNotasApplication - Started EstudianteNotasApplication in 4.631 seconds (process running for 4.938)
+2026-05-24 14:39:34.653 [main] INFO  e.j.e.config.DataInitializer - === Cargando datos de prueba ===
+2026-05-24 14:39:34.757 [main] INFO  e.j.e.config.DataInitializer - === Datos cargados correctamente ===
+2026-05-24 14:39:34.757 [main] INFO  e.j.e.config.DataInitializer - Profesor: profesor@javeriana.edu / prof123
+2026-05-24 14:39:34.757 [main] INFO  e.j.e.config.DataInitializer - Alumno:   alumno@javeriana.edu  / alumno123 (ID: 2)
+2026-05-24 14:39:37.686 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-24 14:39:37.689 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-24 14:39:37.689 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-05-24 14:39:39.492 [http-nio-8081-exec-6] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-24 14:39:39.492 [http-nio-8081-exec-6] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 25.0% (debería ser 100%)
+2026-05-24 14:39:41.970 [http-nio-8081-exec-8] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2/promedio-general
+2026-05-24 14:39:41.971 [http-nio-8081-exec-8] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getPromedioGeneral
+2026-05-24 14:39:41.976 [http-nio-8081-exec-8] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-24 14:39:41.976 [http-nio-8081-exec-8] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 25.0% (debería ser 100%)
+2026-05-24 14:39:41.989 [http-nio-8081-exec-9] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2/promedios-por-materia
+2026-05-24 14:39:41.989 [http-nio-8081-exec-9] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getPromediosPorMateria
+2026-05-24 14:39:41.995 [http-nio-8081-exec-9] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-24 14:39:41.995 [http-nio-8081-exec-9] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 25.0% (debería ser 100%)
+2026-05-24 14:39:42.005 [http-nio-8081-exec-10] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2
+2026-05-24 14:39:42.008 [http-nio-8081-exec-10] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getNotasByAlumno
+2026-05-24 14:40:01.755 [http-nio-8081-exec-1] WARN  e.j.e.aspecto.AspectExcepciones - [EXCEPCION-VALIDACION] observacion: La observación es obligatoria; valor: La nota máxima es 5.0
+2026-05-24 14:40:05.648 [http-nio-8081-exec-2] WARN  e.j.e.aspecto.AspectExcepciones - [EXCEPCION-VALIDACION] observacion: La observación es obligatoria
+2026-05-24 14:40:08.313 [http-nio-8081-exec-3] WARN  e.j.e.aspecto.AspectExcepciones - [EXCEPCION-VALIDACION] observacion: La observación es obligatoria
+2026-05-24 14:40:14.653 [http-nio-8081-exec-4] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: POST, Endpoint: /api/notas
+2026-05-24 14:40:14.653 [http-nio-8081-exec-4] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - createNota
+2026-05-24 14:40:14.669 [http-nio-8081-exec-4] WARN  e.j.e.aspecto.AspectExcepciones - [EXCEPCION-NEGOCIO] ❌ La materia 'Teoría de la Computación' ya tiene 70,0% acumulado. No puede agregar otro 80,0% (total sería 150,0%)
+2026-05-24 14:40:22.372 [http-nio-8081-exec-5] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: POST, Endpoint: /api/notas
+2026-05-24 14:40:22.372 [http-nio-8081-exec-5] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - createNota
+2026-05-24 14:40:22.380 [http-nio-8081-exec-5] INFO  e.j.e.servicio.ServicioNotaImpl - ✅ La materia 'Teoría de la Computación' ha alcanzado el 100% de porcentaje para el alumno ID: 2
+2026-05-24 14:40:22.398 [http-nio-8081-exec-6] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2/promedio-general
+2026-05-24 14:40:22.400 [http-nio-8081-exec-6] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getPromedioGeneral
+2026-05-24 14:40:22.400 [http-nio-8081-exec-6] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 25.0% (debería ser 100%)
+2026-05-24 14:40:22.415 [http-nio-8081-exec-7] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2/promedios-por-materia
+2026-05-24 14:40:22.415 [http-nio-8081-exec-7] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getPromediosPorMateria
+2026-05-24 14:40:22.422 [http-nio-8081-exec-7] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 25.0% (debería ser 100%)
+2026-05-24 14:40:22.434 [http-nio-8081-exec-8] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2
+2026-05-24 14:40:22.434 [http-nio-8081-exec-8] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getNotasByAlumno
+2026-05-24 14:40:42.446 [http-nio-8081-exec-9] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: POST, Endpoint: /api/notas
+2026-05-24 14:40:42.446 [http-nio-8081-exec-9] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - createNota
+2026-05-24 14:40:42.452 [http-nio-8081-exec-9] WARN  e.j.e.aspecto.AspectExcepciones - [EXCEPCION-NEGOCIO] ❌ La materia 'Teoría de la Computación' ya tiene 100,0% acumulado. No puede agregar otro 10,0% (total sería 110,0%)
+2026-05-24 14:41:04.377 [http-nio-8081-exec-10] WARN  e.j.e.aspecto.AspectExcepciones - [EXCEPCION-VALIDACION] correo: Debe ser un correo válido
+2026-05-24 14:41:15.668 [http-nio-8081-exec-3] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 25.0% (debería ser 100%)
+2026-05-24 14:41:58.034 [http-nio-8081-exec-9] ERROR e.j.e.aspecto.AspectExcepciones - [AOP-EXCEPCION] edu.javeriana.estudiante_notas.servicio.ServicioAuthImpl.login() lanzó: RuntimeException - Mensaje: Credenciales inválidas
+2026-05-24 14:41:58.034 [http-nio-8081-exec-9] WARN  e.j.e.aspecto.AspectExcepciones - [EXCEPCION-NEGOCIO] Credenciales inválidas
+2026-05-24 14:42:07.717 [http-nio-8081-exec-3] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 2, Rol: ALUMNO, Método: GET, Endpoint: /api/notas/alumno/2/promedio-general
+2026-05-24 14:42:07.717 [http-nio-8081-exec-3] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a ALUMNO ID: 2 - getPromedioGeneral
+2026-05-24 14:42:07.728 [http-nio-8081-exec-3] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 25.0% (debería ser 100%)
+2026-05-24 14:42:07.736 [http-nio-8081-exec-4] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 2, Rol: ALUMNO, Método: GET, Endpoint: /api/notas/alumno/2/promedios-por-materia
+2026-05-24 14:42:07.736 [http-nio-8081-exec-4] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a ALUMNO ID: 2 - getPromediosPorMateria
+2026-05-24 14:42:07.742 [http-nio-8081-exec-4] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 25.0% (debería ser 100%)
+2026-05-24 14:42:07.755 [http-nio-8081-exec-5] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 2, Rol: ALUMNO, Método: GET, Endpoint: /api/notas/alumno/2
+2026-05-24 14:42:07.755 [http-nio-8081-exec-5] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a ALUMNO ID: 2 - getNotasByAlumno
+2026-05-24 14:42:16.665 [http-nio-8081-exec-9] ERROR e.j.e.aspecto.AspectExcepciones - [AOP-EXCEPCION] edu.javeriana.estudiante_notas.servicio.ServicioAuthImpl.login() lanzó: RuntimeException - Mensaje: Credenciales inválidas
+2026-05-24 14:42:16.665 [http-nio-8081-exec-9] WARN  e.j.e.aspecto.AspectExcepciones - [EXCEPCION-NEGOCIO] Credenciales inválidas
+2026-05-30 13:31:21.270 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-05-30 13:31:21.324 [main] INFO  e.j.e.EstudianteNotasApplication - Starting EstudianteNotasApplication using Java 23 with PID 22836 (C:\Users\carol\OneDrive\Documentos\Semestre_5\Sistemas distribuidos\estudiante_notas\target\classes started by carol in C:\Users\carol\OneDrive\Documentos\Semestre_5\Sistemas distribuidos\estudiante_notas)
+2026-05-30 13:31:21.324 [main] DEBUG e.j.e.EstudianteNotasApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-05-30 13:31:21.324 [main] INFO  e.j.e.EstudianteNotasApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-30 13:31:22.128 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-30 13:31:22.239 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 97 ms. Found 5 JPA repository interfaces.
+2026-05-30 13:31:23.013 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-05-30 13:31:23.030 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-05-30 13:31:23.035 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-30 13:31:23.035 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-05-30 13:31:23.100 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-30 13:31:23.102 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1718 ms
+2026-05-30 13:31:23.132 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-05-30 13:31:23.372 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:notasdb user=SA
+2026-05-30 13:31:23.388 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-05-30 13:31:23.406 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:notasdb'
+2026-05-30 13:31:23.552 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-30 13:31:23.624 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-05-30 13:31:23.671 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-05-30 13:31:23.970 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-30 13:31:24.036 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-30 13:31:25.279 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-30 13:31:25.351 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-30 13:31:25.893 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-30 13:31:25.930 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2026-05-30 13:31:26.329 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-05-30 13:31:26.356 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
+2026-05-30 13:31:26.368 [main] INFO  e.j.e.EstudianteNotasApplication - Started EstudianteNotasApplication in 5.669 seconds (process running for 6.107)
+2026-05-30 13:31:26.372 [main] INFO  e.j.e.config.DataInitializer - === Cargando datos de prueba ===
+2026-05-30 13:31:26.494 [main] INFO  e.j.e.config.DataInitializer - === Datos cargados correctamente ===
+2026-05-30 13:31:26.494 [main] INFO  e.j.e.config.DataInitializer - Profesor: profesor@javeriana.edu / prof123
+2026-05-30 13:31:26.494 [main] INFO  e.j.e.config.DataInitializer - Alumno:   alumno@javeriana.edu  / alumno123 (ID: 2)
+2026-05-30 13:33:44.673 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-05-30 13:33:44.715 [main] INFO  e.j.e.EstudianteNotasApplication - Starting EstudianteNotasApplication using Java 23 with PID 14384 (C:\Users\carol\OneDrive\Documentos\Semestre_5\Sistemas distribuidos\estudiante_notas\target\classes started by carol in C:\Users\carol\OneDrive\Documentos\Semestre_5\Sistemas distribuidos\estudiante_notas)
+2026-05-30 13:33:44.715 [main] DEBUG e.j.e.EstudianteNotasApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-05-30 13:33:44.715 [main] INFO  e.j.e.EstudianteNotasApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-30 13:33:45.272 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-30 13:33:45.338 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 56 ms. Found 5 JPA repository interfaces.
+2026-05-30 13:33:45.859 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-05-30 13:33:45.868 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-05-30 13:33:45.868 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-30 13:33:45.868 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-05-30 13:33:45.928 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-30 13:33:45.928 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1158 ms
+2026-05-30 13:33:45.956 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-05-30 13:33:46.112 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:notasdb user=SA
+2026-05-30 13:33:46.112 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-05-30 13:33:46.136 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:notasdb'
+2026-05-30 13:33:46.248 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-30 13:33:46.285 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-05-30 13:33:46.312 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-05-30 13:33:46.472 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-30 13:33:46.504 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-30 13:33:47.244 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-30 13:33:47.308 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-30 13:33:47.743 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-30 13:33:47.758 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2026-05-30 13:33:48.031 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-05-30 13:33:48.056 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
+2026-05-30 13:33:48.056 [main] INFO  e.j.e.EstudianteNotasApplication - Started EstudianteNotasApplication in 3.817 seconds (process running for 4.121)
+2026-05-30 13:33:48.072 [main] INFO  e.j.e.config.DataInitializer - === Cargando datos de prueba ===
+2026-05-30 13:33:48.168 [main] INFO  e.j.e.config.DataInitializer - === Datos cargados correctamente ===
+2026-05-30 13:33:48.168 [main] INFO  e.j.e.config.DataInitializer - Profesor: profesor@javeriana.edu / prof123
+2026-05-30 13:33:48.176 [main] INFO  e.j.e.config.DataInitializer - Alumno:   alumno@javeriana.edu  / alumno123 (ID: 2)
+2026-05-30 13:34:12.495 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-30 13:34:12.495 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-30 13:34:12.495 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-05-30 13:34:13.583 [http-nio-8081-exec-8] ERROR e.j.e.aspecto.AspectExcepciones - [EXCEPCION-GENERAL] Excepción no controlada: No static resource favicon.ico.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+2026-05-30 13:34:36.052 [http-nio-8081-exec-9] ERROR e.j.e.aspecto.AspectExcepciones - [EXCEPCION-GENERAL] Excepción no controlada: No static resource favicon.ico.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+2026-05-30 13:34:43.096 [http-nio-8081-exec-8] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-30 13:34:43.096 [http-nio-8081-exec-8] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 25.0% (debería ser 100%)
+2026-05-30 13:34:47.333 [http-nio-8081-exec-3] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2/promedio-general
+2026-05-30 13:34:47.338 [http-nio-8081-exec-3] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getPromedioGeneral
+2026-05-30 13:34:47.366 [http-nio-8081-exec-3] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-30 13:34:47.366 [http-nio-8081-exec-3] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 25.0% (debería ser 100%)
+2026-05-30 13:34:47.398 [http-nio-8081-exec-6] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2/promedios-por-materia
+2026-05-30 13:34:47.398 [http-nio-8081-exec-6] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getPromediosPorMateria
+2026-05-30 13:34:47.431 [http-nio-8081-exec-6] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-30 13:34:47.431 [http-nio-8081-exec-6] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 25.0% (debería ser 100%)
+2026-05-30 13:34:47.456 [http-nio-8081-exec-7] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2
+2026-05-30 13:34:47.461 [http-nio-8081-exec-7] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getNotasByAlumno
+2026-05-30 13:34:58.783 [http-nio-8081-exec-2] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: PUT, Endpoint: /api/notas/1
+2026-05-30 13:34:58.783 [http-nio-8081-exec-2] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - updateNota
+2026-05-30 13:34:58.939 [http-nio-8081-exec-9] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2/promedio-general
+2026-05-30 13:34:58.939 [http-nio-8081-exec-9] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getPromedioGeneral
+2026-05-30 13:34:58.964 [http-nio-8081-exec-9] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-30 13:34:58.964 [http-nio-8081-exec-9] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 25.0% (debería ser 100%)
+2026-05-30 13:34:58.981 [http-nio-8081-exec-4] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2/promedios-por-materia
+2026-05-30 13:34:58.981 [http-nio-8081-exec-4] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getPromediosPorMateria
+2026-05-30 13:34:59.014 [http-nio-8081-exec-4] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-30 13:34:59.014 [http-nio-8081-exec-4] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 25.0% (debería ser 100%)
+2026-05-30 13:34:59.032 [http-nio-8081-exec-1] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 1, Rol: PROFESOR, Método: GET, Endpoint: /api/notas/alumno/2
+2026-05-30 13:34:59.039 [http-nio-8081-exec-1] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a PROFESOR ID: 1 - getNotasByAlumno
+2026-05-30 13:38:17.379 [http-nio-8081-exec-7] ERROR e.j.e.aspecto.AspectExcepciones - [EXCEPCION-GENERAL] Excepción no controlada: No static resource favicon.ico.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+2026-05-30 13:38:41.804 [http-nio-8081-exec-1] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 2, Rol: ALUMNO, Método: GET, Endpoint: /api/notas/alumno/2/promedio-general
+2026-05-30 13:38:41.812 [http-nio-8081-exec-1] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a ALUMNO ID: 2 - getPromedioGeneral
+2026-05-30 13:38:41.858 [http-nio-8081-exec-1] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-30 13:38:41.858 [http-nio-8081-exec-1] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 25.0% (debería ser 100%)
+2026-05-30 13:38:41.923 [http-nio-8081-exec-5] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 2, Rol: ALUMNO, Método: GET, Endpoint: /api/notas/alumno/2/promedios-por-materia
+2026-05-30 13:38:41.924 [http-nio-8081-exec-5] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a ALUMNO ID: 2 - getPromediosPorMateria
+2026-05-30 13:38:41.947 [http-nio-8081-exec-5] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-30 13:38:41.947 [http-nio-8081-exec-5] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 25.0% (debería ser 100%)
+2026-05-30 13:38:41.977 [http-nio-8081-exec-8] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 2, Rol: ALUMNO, Método: GET, Endpoint: /api/notas/alumno/2
+2026-05-30 13:38:41.979 [http-nio-8081-exec-8] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a ALUMNO ID: 2 - getNotasByAlumno
+2026-05-30 13:41:53.329 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-05-30 13:41:53.370 [main] INFO  e.j.e.EstudianteNotasApplication - Starting EstudianteNotasApplication using Java 23 with PID 10196 (C:\Users\carol\OneDrive\Documentos\Semestre_5\Sistemas distribuidos\estudiante_notas\target\classes started by carol in C:\Users\carol\OneDrive\Documentos\Semestre_5\Sistemas distribuidos\estudiante_notas)
+2026-05-30 13:41:53.370 [main] DEBUG e.j.e.EstudianteNotasApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-05-30 13:41:53.370 [main] INFO  e.j.e.EstudianteNotasApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-30 13:41:54.028 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-30 13:41:54.135 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 97 ms. Found 5 JPA repository interfaces.
+2026-05-30 13:41:54.792 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-05-30 13:41:54.802 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-05-30 13:41:54.804 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-30 13:41:54.804 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-05-30 13:41:54.856 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-30 13:41:54.856 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1446 ms
+2026-05-30 13:41:54.893 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-05-30 13:41:55.039 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:notasdb user=SA
+2026-05-30 13:41:55.039 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-05-30 13:41:55.069 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:notasdb'
+2026-05-30 13:41:55.182 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-30 13:41:55.222 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-05-30 13:41:55.256 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-05-30 13:41:55.444 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-30 13:41:55.471 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-30 13:41:56.314 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-30 13:41:56.374 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-30 13:41:56.776 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-30 13:41:56.791 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2026-05-30 13:41:57.197 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-05-30 13:41:57.218 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
+2026-05-30 13:41:57.232 [main] INFO  e.j.e.EstudianteNotasApplication - Started EstudianteNotasApplication in 4.419 seconds (process running for 4.814)
+2026-05-30 13:41:57.232 [main] INFO  e.j.e.config.DataInitializer - === Cargando datos de prueba ===
+2026-05-30 13:41:57.336 [main] INFO  e.j.e.config.DataInitializer - === Datos cargados correctamente ===
+2026-05-30 13:41:57.336 [main] INFO  e.j.e.config.DataInitializer - Profesor: profesor@javeriana.edu / prof123
+2026-05-30 13:41:57.336 [main] INFO  e.j.e.config.DataInitializer - Alumno:   alumno@javeriana.edu  / alumno123 (ID: 2)
+2026-05-30 13:42:13.779 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-30 13:42:13.786 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-30 13:42:13.793 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2026-05-30 13:42:14.126 [http-nio-8081-exec-3] ERROR e.j.e.aspecto.AspectExcepciones - [EXCEPCION-GENERAL] Excepción no controlada: No static resource favicon.ico.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+2026-05-30 13:43:01.521 [http-nio-8081-exec-8] ERROR e.j.e.aspecto.AspectExcepciones - [EXCEPCION-GENERAL] Excepción no controlada: No static resource favicon.ico.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+2026-05-30 13:43:47.351 [http-nio-8081-exec-6] ERROR e.j.e.aspecto.AspectExcepciones - [EXCEPCION-GENERAL] Excepción no controlada: No static resource favicon.ico.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+2026-05-30 13:46:13.278 [http-nio-8081-exec-7] ERROR e.j.e.aspecto.AspectExcepciones - [AOP-EXCEPCION] edu.javeriana.estudiante_notas.servicio.ServicioAuthImpl.login() lanzó: RuntimeException - Mensaje: Credenciales inválidas
+2026-05-30 13:46:13.295 [http-nio-8081-exec-7] WARN  e.j.e.aspecto.AspectExcepciones - [EXCEPCION-NEGOCIO] Credenciales inválidas
+2026-05-30 13:46:28.239 [http-nio-8081-exec-6] ERROR e.j.e.aspecto.AspectExcepciones - [AOP-EXCEPCION] edu.javeriana.estudiante_notas.servicio.ServicioAuthImpl.login() lanzó: RuntimeException - Mensaje: Credenciales inválidas
+2026-05-30 13:46:28.246 [http-nio-8081-exec-6] WARN  e.j.e.aspecto.AspectExcepciones - [EXCEPCION-NEGOCIO] Credenciales inválidas
+2026-05-30 13:46:30.132 [http-nio-8081-exec-1] ERROR e.j.e.aspecto.AspectExcepciones - [AOP-EXCEPCION] edu.javeriana.estudiante_notas.servicio.ServicioAuthImpl.login() lanzó: RuntimeException - Mensaje: Credenciales inválidas
+2026-05-30 13:46:30.132 [http-nio-8081-exec-1] WARN  e.j.e.aspecto.AspectExcepciones - [EXCEPCION-NEGOCIO] Credenciales inválidas
+2026-05-30 13:46:31.089 [http-nio-8081-exec-10] ERROR e.j.e.aspecto.AspectExcepciones - [AOP-EXCEPCION] edu.javeriana.estudiante_notas.servicio.ServicioAuthImpl.login() lanzó: RuntimeException - Mensaje: Credenciales inválidas
+2026-05-30 13:46:31.094 [http-nio-8081-exec-10] WARN  e.j.e.aspecto.AspectExcepciones - [EXCEPCION-NEGOCIO] Credenciales inválidas
+2026-05-30 13:46:31.332 [http-nio-8081-exec-4] ERROR e.j.e.aspecto.AspectExcepciones - [AOP-EXCEPCION] edu.javeriana.estudiante_notas.servicio.ServicioAuthImpl.login() lanzó: RuntimeException - Mensaje: Credenciales inválidas
+2026-05-30 13:46:31.336 [http-nio-8081-exec-4] WARN  e.j.e.aspecto.AspectExcepciones - [EXCEPCION-NEGOCIO] Credenciales inválidas
+2026-05-30 13:46:31.547 [http-nio-8081-exec-5] ERROR e.j.e.aspecto.AspectExcepciones - [AOP-EXCEPCION] edu.javeriana.estudiante_notas.servicio.ServicioAuthImpl.login() lanzó: RuntimeException - Mensaje: Credenciales inválidas
+2026-05-30 13:46:31.547 [http-nio-8081-exec-5] WARN  e.j.e.aspecto.AspectExcepciones - [EXCEPCION-NEGOCIO] Credenciales inválidas
+2026-05-30 13:46:53.153 [http-nio-8081-exec-9] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 2, Rol: ALUMNO, Método: GET, Endpoint: /api/notas/alumno/2/promedio-general
+2026-05-30 13:46:53.163 [http-nio-8081-exec-9] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a ALUMNO ID: 2 - getPromedioGeneral
+2026-05-30 13:46:53.284 [http-nio-8081-exec-9] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-30 13:46:53.284 [http-nio-8081-exec-9] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 25.0% (debería ser 100%)
+2026-05-30 13:46:53.349 [http-nio-8081-exec-7] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 2, Rol: ALUMNO, Método: GET, Endpoint: /api/notas/alumno/2/promedios-por-materia
+2026-05-30 13:46:53.349 [http-nio-8081-exec-7] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a ALUMNO ID: 2 - getPromediosPorMateria
+2026-05-30 13:46:53.405 [http-nio-8081-exec-7] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-30 13:46:53.407 [http-nio-8081-exec-7] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 25.0% (debería ser 100%)
+2026-05-30 13:46:53.424 [http-nio-8081-exec-6] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 2, Rol: ALUMNO, Método: GET, Endpoint: /api/notas/alumno/2
+2026-05-30 13:46:53.424 [http-nio-8081-exec-6] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a ALUMNO ID: 2 - getNotasByAlumno
+2026-05-30 13:49:19.533 [http-nio-8081-exec-9] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 2, Rol: ALUMNO, Método: GET, Endpoint: /api/notas/alumno/2/promedio-general
+2026-05-30 13:49:19.541 [http-nio-8081-exec-9] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a ALUMNO ID: 2 - getPromedioGeneral
+2026-05-30 13:49:19.546 [http-nio-8081-exec-7] ERROR e.j.e.aspecto.AspectExcepciones - [EXCEPCION-GENERAL] Excepción no controlada: No static resource favicon.ico.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+2026-05-30 13:49:19.594 [http-nio-8081-exec-9] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-30 13:49:19.594 [http-nio-8081-exec-9] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 25.0% (debería ser 100%)
+2026-05-30 13:49:19.613 [http-nio-8081-exec-6] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 2, Rol: ALUMNO, Método: GET, Endpoint: /api/notas/alumno/2/promedios-por-materia
+2026-05-30 13:49:19.613 [http-nio-8081-exec-6] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a ALUMNO ID: 2 - getPromediosPorMateria
+2026-05-30 13:49:19.638 [http-nio-8081-exec-6] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-30 13:49:19.646 [http-nio-8081-exec-6] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 25.0% (debería ser 100%)
+2026-05-30 13:49:19.665 [http-nio-8081-exec-10] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 2, Rol: ALUMNO, Método: GET, Endpoint: /api/notas/alumno/2
+2026-05-30 13:49:19.665 [http-nio-8081-exec-10] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a ALUMNO ID: 2 - getNotasByAlumno
+2026-05-30 13:51:49.719 [http-nio-8081-exec-7] ERROR e.j.e.aspecto.AspectExcepciones - [EXCEPCION-GENERAL] Excepción no controlada: No static resource favicon.ico.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+2026-05-30 13:51:49.727 [http-nio-8081-exec-6] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 2, Rol: ALUMNO, Método: GET, Endpoint: /api/notas/alumno/2/promedio-general
+2026-05-30 13:51:49.735 [http-nio-8081-exec-6] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a ALUMNO ID: 2 - getPromedioGeneral
+2026-05-30 13:51:49.802 [http-nio-8081-exec-6] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-30 13:51:49.802 [http-nio-8081-exec-6] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 25.0% (debería ser 100%)
+2026-05-30 13:51:49.819 [http-nio-8081-exec-10] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 2, Rol: ALUMNO, Método: GET, Endpoint: /api/notas/alumno/2/promedios-por-materia
+2026-05-30 13:51:49.819 [http-nio-8081-exec-10] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a ALUMNO ID: 2 - getPromediosPorMateria
+2026-05-30 13:51:49.843 [http-nio-8081-exec-10] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-30 13:51:49.843 [http-nio-8081-exec-10] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 25.0% (debería ser 100%)
+2026-05-30 13:51:49.857 [http-nio-8081-exec-4] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 2, Rol: ALUMNO, Método: GET, Endpoint: /api/notas/alumno/2
+2026-05-30 13:51:49.857 [http-nio-8081-exec-4] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a ALUMNO ID: 2 - getNotasByAlumno
+2026-05-30 13:52:14.674 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-05-30 13:52:14.722 [main] INFO  e.j.e.EstudianteNotasApplication - Starting EstudianteNotasApplication using Java 23 with PID 19344 (C:\Users\carol\OneDrive\Documentos\Semestre_5\Sistemas distribuidos\estudiante_notas\target\classes started by carol in C:\Users\carol\OneDrive\Documentos\Semestre_5\Sistemas distribuidos\estudiante_notas)
+2026-05-30 13:52:14.722 [main] DEBUG e.j.e.EstudianteNotasApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-05-30 13:52:14.722 [main] INFO  e.j.e.EstudianteNotasApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-30 13:52:15.340 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-30 13:52:15.428 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 77 ms. Found 5 JPA repository interfaces.
+2026-05-30 13:52:16.087 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-05-30 13:52:16.114 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-05-30 13:52:16.118 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-30 13:52:16.118 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-05-30 13:52:16.178 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-30 13:52:16.178 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1400 ms
+2026-05-30 13:52:16.214 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-05-30 13:52:16.406 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:notasdb user=SA
+2026-05-30 13:52:16.413 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-05-30 13:52:16.433 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:notasdb'
+2026-05-30 13:52:16.565 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-30 13:52:16.624 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-05-30 13:52:16.679 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-05-30 13:52:16.921 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-30 13:52:16.967 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-30 13:52:17.941 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-30 13:52:18.017 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-30 13:52:18.482 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-30 13:52:18.501 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2026-05-30 13:52:18.835 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-05-30 13:52:18.866 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
+2026-05-30 13:52:18.876 [main] INFO  e.j.e.EstudianteNotasApplication - Started EstudianteNotasApplication in 4.706 seconds (process running for 5.107)
+2026-05-30 13:52:18.883 [main] INFO  e.j.e.config.DataInitializer - === Cargando datos de prueba ===
+2026-05-30 13:52:18.984 [main] INFO  e.j.e.config.DataInitializer - === Datos cargados correctamente ===
+2026-05-30 13:52:18.984 [main] INFO  e.j.e.config.DataInitializer - Profesor: profesor@javeriana.edu / prof123
+2026-05-30 13:52:18.984 [main] INFO  e.j.e.config.DataInitializer - Alumno:   alumno@javeriana.edu  / alumno123 (ID: 2)
+2026-05-30 13:52:38.820 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-30 13:52:38.820 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-30 13:52:38.820 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-05-30 13:52:39.047 [http-nio-8081-exec-2] ERROR e.j.e.aspecto.AspectExcepciones - [EXCEPCION-GENERAL] Excepción no controlada: No static resource favicon.ico.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+2026-05-30 13:53:00.423 [http-nio-8081-exec-7] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 2, Rol: ALUMNO, Método: GET, Endpoint: /api/notas/alumno/2/promedio-general
+2026-05-30 13:53:00.424 [http-nio-8081-exec-7] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a ALUMNO ID: 2 - getPromedioGeneral
+2026-05-30 13:53:00.486 [http-nio-8081-exec-7] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-30 13:53:00.487 [http-nio-8081-exec-7] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 25.0% (debería ser 100%)
+2026-05-30 13:53:00.522 [http-nio-8081-exec-3] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 2, Rol: ALUMNO, Método: GET, Endpoint: /api/notas/alumno/2/promedios-por-materia
+2026-05-30 13:53:00.522 [http-nio-8081-exec-3] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a ALUMNO ID: 2 - getPromediosPorMateria
+2026-05-30 13:53:00.539 [http-nio-8081-exec-3] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-30 13:53:00.542 [http-nio-8081-exec-3] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 25.0% (debería ser 100%)
+2026-05-30 13:53:00.561 [http-nio-8081-exec-9] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 2, Rol: ALUMNO, Método: GET, Endpoint: /api/notas/alumno/2
+2026-05-30 13:53:00.561 [http-nio-8081-exec-9] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a ALUMNO ID: 2 - getNotasByAlumno
+2026-05-30 13:57:46.932 [http-nio-8081-exec-3] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 2, Rol: ALUMNO, Método: GET, Endpoint: /api/notas/alumno/2/promedio-general
+2026-05-30 13:57:46.932 [http-nio-8081-exec-3] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a ALUMNO ID: 2 - getPromedioGeneral
+2026-05-30 13:57:46.947 [http-nio-8081-exec-6] ERROR e.j.e.aspecto.AspectExcepciones - [EXCEPCION-GENERAL] Excepción no controlada: No static resource favicon.ico.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+2026-05-30 13:57:46.987 [http-nio-8081-exec-3] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-30 13:57:46.987 [http-nio-8081-exec-3] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 25.0% (debería ser 100%)
+2026-05-30 13:57:47.016 [http-nio-8081-exec-9] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 2, Rol: ALUMNO, Método: GET, Endpoint: /api/notas/alumno/2/promedios-por-materia
+2026-05-30 13:57:47.023 [http-nio-8081-exec-9] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a ALUMNO ID: 2 - getPromediosPorMateria
+2026-05-30 13:57:47.043 [http-nio-8081-exec-9] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-30 13:57:47.043 [http-nio-8081-exec-9] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 25.0% (debería ser 100%)
+2026-05-30 13:57:47.056 [http-nio-8081-exec-10] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 2, Rol: ALUMNO, Método: GET, Endpoint: /api/notas/alumno/2
+2026-05-30 13:57:47.061 [http-nio-8081-exec-10] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a ALUMNO ID: 2 - getNotasByAlumno
+2026-05-30 14:21:35.716 [http-nio-8081-exec-3] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 2, Rol: ALUMNO, Método: GET, Endpoint: /api/notas/alumno/2/promedio-general
+2026-05-30 14:21:35.732 [http-nio-8081-exec-3] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a ALUMNO ID: 2 - getPromedioGeneral
+2026-05-30 14:21:35.732 [http-nio-8081-exec-9] ERROR e.j.e.aspecto.AspectExcepciones - [EXCEPCION-GENERAL] Excepción no controlada: No static resource favicon.ico.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+2026-05-30 14:21:35.794 [http-nio-8081-exec-3] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-30 14:21:35.794 [http-nio-8081-exec-3] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 25.0% (debería ser 100%)
+2026-05-30 14:21:35.814 [http-nio-8081-exec-10] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 2, Rol: ALUMNO, Método: GET, Endpoint: /api/notas/alumno/2/promedios-por-materia
+2026-05-30 14:21:35.814 [http-nio-8081-exec-10] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a ALUMNO ID: 2 - getPromediosPorMateria
+2026-05-30 14:21:35.846 [http-nio-8081-exec-10] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Teoría de la Computación' tiene suma de porcentajes: 70.0% (debería ser 100%)
+2026-05-30 14:21:35.846 [http-nio-8081-exec-10] WARN  e.j.e.servicio.ServicioNotaImpl - La materia 'Programación Orientada a Objetos' tiene suma de porcentajes: 25.0% (debería ser 100%)
+2026-05-30 14:21:35.866 [http-nio-8081-exec-2] INFO  e.j.e.aspecto.AspectControlAcceso - Acceso solicitado - Usuario ID: 2, Rol: ALUMNO, Método: GET, Endpoint: /api/notas/alumno/2
+2026-05-30 14:21:35.866 [http-nio-8081-exec-2] INFO  e.j.e.aspecto.AspectControlAcceso - ACCESO CONCEDIDO a ALUMNO ID: 2 - getNotasByAlumno
